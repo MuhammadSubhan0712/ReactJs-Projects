@@ -1,15 +1,14 @@
-import Cards from './component/Cards'
-import Carousel from './component/Carousel'
-import Navbar from './component/Navbar'
+import Cards from "./component/Cards";
+import Carousel from "./component/Carousel";
+import Navbar from "./component/Navbar";
 
 function App() {
-
   return (
     <>
-    <div>
-    <Navbar/>
-    </div>
-{/*     
+      <div>
+        <Navbar />
+      </div>
+      {/*     
     <div>
       <Carousel/>
     </div>
@@ -17,9 +16,8 @@ function App() {
     <div>
 <Cards/>
     </div> */}
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
