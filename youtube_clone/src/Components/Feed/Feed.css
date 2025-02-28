@@ -1,0 +1,50 @@
+.feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px;
+  color: #000;
+}
+
+.card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin: 10px;
+}
+
+.card p {
+  font-size: 12px;
+  color: #777;
+  margin: 10px;
+}
+
+@media (max-width: 900px) {
+  .feed {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
