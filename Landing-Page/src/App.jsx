@@ -20,9 +20,9 @@ const App = () => {
 
       <Pricing />
 
-     <Testimonials/>
+      <Testimonials />
 
-     <Footer/>
+      <Footer />
     </>
   );
 };
