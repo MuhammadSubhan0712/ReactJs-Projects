@@ -86,7 +86,7 @@ const Review = () => {
         </h2>
         <div className="container py-3 sm:py-5 flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-8">
           {/* Input Field and Button */}
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full">
+          <div className="flex justify-center flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full">
             <input
               type="email"
               placeholder="Enter your email address"

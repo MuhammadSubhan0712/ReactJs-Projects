@@ -59,11 +59,11 @@ const Home = () => {
 
           {/* Buttons */}
           <div className="flex space-x-4">
-            <button className="bg-yellow-500 font-serif font-bold text-white px-6 py-3 rounded-lg border-2 border-green-400 flex items-center space-x-2 hover:bg-green-900 hover:border-2 hover:border-yellow-500 transition duration-300">
+            <button className="bg-yellow-500 font-serif font-bold text-white px-6 py-3 rounded-lg border-2 border-green-400 flex items-center space-x-2 hover:scale-105 hover:bg-green-900 hover:border-2 hover:border-yellow-500 transition duration-300">
               <span>Shop Now</span>
               <span>🌱</span>
             </button>
-            <button className="bg-green-900 text-white font-serif font-bold px-6 py-3 border-2 border-yellow-400 rounded-lg flex items-center space-x-2 hover:bg-yellow-500 hover:border-green-400 transition duration-300">
+            <button className="bg-green-900 text-white font-serif font-bold px-6 py-3 border-2 border-yellow-400 rounded-lg flex items-center space-x-2 hover:scale-105 hover:bg-yellow-500 hover:border-green-400 transition duration-300">
               <span>More Info</span>
               <span>🌿</span>
             </button>
