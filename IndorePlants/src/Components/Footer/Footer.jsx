@@ -128,11 +128,15 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          <hr className="border-gray-900 md:block hidden"/>
+          <hr className="border-gray-900 md:block hidden"/>
+          <hr className="border-gray-900 md:block hidden"/>
+          <hr className="border-gray-900 md:block hidden"/>
         </div>
 
         {/* Copyright Section */}
-        <div className="text-center mt-10 pt-6 border-t border-gray-400">
-          <p className="bg-gradient-to-r from-zinc-900 to-teal-900 bg-clip-text text-transparent">
+        <div className="flex justify-center mt-10 text-center ">
+          <p className="text-stone-950">
             Copyright &copy; 2025 All Rights Reserved
           </p>
         </div>
