@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from './Components/Hero/Hero'
 
 const App = () => {
   return (
-    <div className='text-stone-950 text-3xl font-bold underline'>App</div>
+    <main className='bg-[#0d182e]'>
+    <Hero/>
+    </main>
   )
 }
 
