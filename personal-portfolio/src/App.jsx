@@ -3,6 +3,7 @@ import Hero from "./Components/Hero/Hero";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import Skills from "./Components/Skills/Skills";
+import Experience from "./Components/Experience/Experience";
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
     <main className="bg-[#0d182e]">
       <Hero />
       <Skills/>
+      <Experience/>
     </main>
   );
 };
