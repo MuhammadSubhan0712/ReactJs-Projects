@@ -16,18 +16,18 @@ const Navbar = () => {
           <span className="ml-3 text-3xl font-bold text-white">Portfolio</span>
         </a>
         <nav className="md:ml-auto text-white text-base md:mr-auto flex flex-wrap items-center justify-center">
-          {listNavbar.map((item, index) => {
+          {listNavbar.map((item, index) => (
             <a
               key={index}
               href={item.link}
               className="mr-5 hover:text-yellow-300">
               {item.name}
             </a>
-          })
+          ))
         }
         </nav>
         <button
-          className="inline-flex item-center py-1 px-7 focus:outline-none text-base text-white 
+          className="inline-flex items-center py-1 px-7 focus:outline-none text-base text-white 
           mt-4 md:mt-0 border border-white hover:border-yellow-300 hover:text-gray-900">
           <a href="#contact">Contact me</a>
         </button>
