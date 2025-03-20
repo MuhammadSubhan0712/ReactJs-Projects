@@ -4,6 +4,7 @@ import AOS from "aos";
 import 'aos/dist/aos.css';
 import Skills from "./Components/Skills/Skills";
 import Experience from "./Components/Experience/Experience";
+import Language from "./Components/Language/Language";
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
       <Hero />
       <Skills/>
       <Experience/>
+      <Language/>
     </main>
   );
 };
