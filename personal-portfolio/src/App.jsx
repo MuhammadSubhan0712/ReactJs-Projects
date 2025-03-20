@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import Skills from "./Components/Skills/Skills";
 import Experience from "./Components/Experience/Experience";
 import Language from "./Components/Language/Language";
+import Projects from "./Components/Projects/Projects";
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
       <Skills/>
       <Experience/>
       <Language/>
+      <Projects/>
     </main>
   );
 };

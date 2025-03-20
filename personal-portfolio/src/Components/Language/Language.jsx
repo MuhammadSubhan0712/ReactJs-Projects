@@ -17,9 +17,7 @@ const Language = () => {
               <span className="z-10">{language.code}</span>
               <div className="absolute top-[-6px] left-[-6px] right-[-6px] bottom-[-6px] md:top-[-8px] md:left-[-8px] md:right-[-8px] md:bottom-[-8px] rounded-full bg-gradient-to-b from-[#ff9743] to-[#ffe460] shadow-[0_0_20px_rgba(255,165,0,0.7)]"></div>
             </div>
-            <span className="text-xl text-white">
-              {language.name}
-            </span>
+            <span className="text-xl text-white">{language.name}</span>
             <span className="text-[#ffa600] text-lg md:text-xl font-bold">
               {language.level}
             </span>
