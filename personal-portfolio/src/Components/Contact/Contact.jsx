@@ -2,8 +2,12 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-8 lg:py-16 mx-auto max-w-screen-md">
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">
+    <section 
+    data-aos="fade-up"
+    data-aos-delay="400"
+    id="contact" 
+    className="py-8 lg:py-16 mx-auto max-w-screen-md">
+      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
         Contact Me
       </h2>
 
@@ -11,13 +15,13 @@ const Contact = () => {
         <div>
           <label
             for="email"
-            className="block mbb-2 text-xl font-medium text-white">
+            className="block mb-2 text-xl font-medium text-white">
             Email
           </label>
           <input
             type="email"
             id="email"
-            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+            className="shadow-sm bg-gray-300 font-bold border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
             placeholder="name@example.com"
             required
           />
@@ -25,14 +29,14 @@ const Contact = () => {
         <div className="sm:col-span-2">
           <label
             for="message"
-            className="block mbb-2 text-xl font-medium text-white">
+            className="block mb-2 text-xl font-medium text-white">
             Message
           </label>
           <textarea
             rows="6"
             id="message"
-            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-            placeholder="message here"
+            className="shadow-sm bg-gray-300 font-bold border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+            placeholder="Leave a message ..."
             required
           />{" "}
         </div>
