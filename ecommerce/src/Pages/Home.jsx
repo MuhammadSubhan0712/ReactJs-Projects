@@ -1,6 +1,6 @@
 import React from "react";
-import Cards from "../component/Cards";
-import Carousel from "../component/Carousel";
+import Cards from "../Components/Cards";
+import Carousel from "../Components/Carousel";
 
 export const Home = () => {
   return (

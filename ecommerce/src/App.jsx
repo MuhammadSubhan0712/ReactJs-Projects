@@ -1,11 +1,23 @@
-import React from 'react'
+import Cards from "./Components/Cards";
+import Navbar from "./Components/Navbar";
+import Carousel from "./Components/Carousel";
 
-const App = () => {
+function App() {
   return (
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  )
+    <>
+      <div>
+        <Navbar />
+      </div>
+      {/*     
+    <div>
+      <Carousel/>
+    </div>
+
+    <div>
+<Cards/>
+    </div> */}
+    </>
+  );
 }
 
-export default App
+export default App;
