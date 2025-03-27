@@ -9,7 +9,12 @@ const Language = () => {
     <section
       data-aos="fade-up"
       data-aos-delay="400"
-      className="flex flex-wrap md:flex-nowrap items-center justify-center gap-10 md:gap-20 h-[300px] text-blue-950 mt-11">
+      id="language"
+      className="flex flex-col items-center justify-center gap-10 md:gap-20 min-h-[300px] text-blue-200 mt-11">
+      <h2 className="text-4xl font-bold text-center mb-8 md:mb-12">
+        Languages
+      </h2>
+
       <div className="grid grid-cols-2 gap-10 md:grid-cols-2 md:gap-20">
         {languages.map((language, index) => (
           <div key={index} className="achievement flex flex-col items-center">
