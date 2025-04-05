@@ -1,24 +1,45 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 export const CartSlice = createSlice({
-  name: 'counter',
+  name: "cart",
   initialState: {
-    value: 0,
+    items: [],
+    total: 0,
   },
   reducers: {
-    increment: (state) => {
-      state.value += 1
+    addItem: (state, action) => {
+      const existingItem = state.items.find(
+        (item) => item.id === action.payload.id
+      );
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        state.items.push({ ...action.payload, quantity: 1 });
+      }
+      state.total += action.payload.price;
     },
-    decrement: (state) => {
-      state.value -= 1
+    removeItem: (state, action) => {
+      const itemToRemove = (state.items = state.items.find(
+        (item) => item.id === action.payload
+      ));
+      if (itemToRemove) {
+        state.total -= itemToRemove.price * itemToRemove.quantity;
+        state.items = state.items.filter((item) => item.id !== action.payload);
+      }
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
+
+    updateQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const item = state.items.find((item) => item.id === id);
+      if (item) {
+        state.total += (quantity - item.quantity) * item.price;
+        item.quantity = quantity;
+      }
     },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = CartSlice.actions
+export const { addItem, removeItem, updateQuantity } = CartSlice.actions;
 
-export default CartSlice.reducer
+export default CartSlice.reducer;

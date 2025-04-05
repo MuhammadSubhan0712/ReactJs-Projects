@@ -2,6 +2,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Loader } from "lucide-react";
+
 const Cards = () => {
   const [data, setData] = useState(null);
 
