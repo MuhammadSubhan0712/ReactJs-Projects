@@ -1,10 +1,14 @@
 
 import { configureStore } from "@reduxjs/toolkit";
-import CartReducer from "../reducer/cartSlice"
+import CartReducer, { addItem } from "../reducer/cartSlice"
 
 export default configureStore({
-    reducer:{
-        cart: CartReducer
+    reducer:
+    {
+        addItem: (state, action) => {
+            state.items.push(action.payload);
+        }
     },
+
 })
 
