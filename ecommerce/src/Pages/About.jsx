@@ -1,9 +1,9 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
-      <div className="container mx-auto my-12 px-6 lg:px-0">
+      <div className="container mx-auto my-12  px-6 lg:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-blue-900 p-5 border-2 rounded-lg">
           {/* Image Section */}
           <div className="flex justify-center">
@@ -53,11 +53,13 @@ const About = () => {
               delivering a smooth shopping experience with satisfaction
               guaranteed. 🙌
             </p>
-            <a
-              href="/products"
+            <Link to={"./Products.jsx"}>            
+            <button 
               className="inline-block bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-500 dark:hover:bg-blue-600">
               Shop Now
-            </a>
+            </button>
+            </Link>
+
           </div>
         </div>
       </div>
