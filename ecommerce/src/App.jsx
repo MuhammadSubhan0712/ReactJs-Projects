@@ -7,9 +7,9 @@ function App() {
     <>
    
         <Navbar />
-      <div>
+      
       <Carousel/>
-      </div>
+      
         {/* <Cards/> */}
 
     </>
