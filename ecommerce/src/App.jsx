@@ -5,17 +5,13 @@ import Carousel from "./Components/Carousel";
 function App() {
   return (
     <>
-      <div>
+   
         <Navbar />
-      </div>
-         
-    <div>
+      <div>
       <Carousel/>
-    </div>
+      </div>
+        {/* <Cards/> */}
 
-    {/* <div>
-<Cards/>
-    </div>  */}
     </>
   );
 }
