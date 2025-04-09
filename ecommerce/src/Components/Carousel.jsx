@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
-    "/assets/carousel1.jpg", // Move these to public/assets/ folder
+    "/assets/carousel1.jpg",
     "/assets/carousel2.jpg",
     "/assets/carousel3.jpg",
     "/assets/carousel4.jpg",
