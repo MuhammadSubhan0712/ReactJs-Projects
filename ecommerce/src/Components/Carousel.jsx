@@ -45,7 +45,7 @@ const Carousel = () => {
           >
             <img
               src={image}
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full"
               alt={`Slide ${index + 1}`}
               loading={index === currentSlide ? "eager" : "lazy"}
             />

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Home } from "../Pages/Home";
-import logo from "../assets/ec-logo.jpg";
+import logo from "/assets/ec-logo.jpg";
 import { useSelector } from "react-redux";
 import { ShoppingCart } from "lucide-react";
 
