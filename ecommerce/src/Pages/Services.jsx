@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="p-6 bg-gradient-to-r from-blue-200 to bg-blue-300 min-h-screen">
+    <div className="my-15 p-6 bg-gradient-to-r from-blue-200 to bg-blue-300 min-h-screen">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-10">
         Our E-Commerce Services
       </h1>

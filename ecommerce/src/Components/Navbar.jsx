@@ -19,7 +19,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-base-200 border-b border-gray-200 dark:bg-gray-900">
+    <nav className="fixed w-full top-0 z-50 bg-base-200/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-700">
+      
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="flex items-center space-x-3">
@@ -79,7 +80,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-800 px-4 pb-4 space-y-3">
+        <div className="md:hidden flex justify-center flex-col items-center bg-white dark:bg-gray-800 px-4 pb-4 space-y-3">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -90,11 +91,6 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-
-          <button className="block w-full text-left py-2 text-gray-800 dark:text-white">
-            🌐 English (US)
-          </button>
-
           <Link
             to="/cart"
             className="flex items-center text-gray-800 dark:text-white py-2"

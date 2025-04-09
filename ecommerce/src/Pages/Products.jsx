@@ -20,7 +20,7 @@ const Products = () => {
   return (
     <>
       {products ? (
-        <div className="bg-gradient-to-r from-blue-200 to bg-blue-300 mt-5 grid grid-cols-1 md:grid-cols-3 gap-8 p-7">
+        <div className="bg-gradient-to-r from-blue-200 to bg-blue-300 my-15 grid grid-cols-1 md:grid-cols-3 gap-8 p-7">
           {products.map((item) => (
             <div
               key={item.id}

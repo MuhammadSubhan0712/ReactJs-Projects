@@ -50,7 +50,7 @@ export const Home = () => {
   return (
     <>
       <div className="bg-gradient-to-r from-blue-200 to bg-blue-300">
-        <div>
+        <div className="mt-15">
           <Carousel />
         </div>
 

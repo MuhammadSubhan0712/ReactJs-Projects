@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
-      <div className="container mx-auto my-12  px-6 lg:px-0">
+      <div className="container mx-auto my-15 px-6 lg:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-blue-900 p-5 border-2 rounded-lg">
           {/* Image Section */}
           <div className="flex justify-center">
