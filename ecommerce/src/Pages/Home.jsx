@@ -2,6 +2,7 @@ import React from "react";
 import Cards from "../Components/Cards";
 import Carousel from "../Components/Carousel";
 import { Tag, Truck, Shield, Star } from "lucide-react";
+
 export const Home = () => {
   // Featured Categories Data:
   const categories = [
@@ -54,7 +55,7 @@ export const Home = () => {
         </div>
 
         {/* Value Prepositions */}
-        <div className="contianer mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <iv className="contianer mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
             <Truck className="text-blue-600 mr-3" size={24} />
             <div>
@@ -86,7 +87,7 @@ export const Home = () => {
               <p className="text-sm text-gray-600">Trusted by thousands</p>
             </div>
           </div>
-        </div>
+        </iv>
 
         {/* Featured Categories */}
         <div className="container mx-auto px-4 py-12">
@@ -166,12 +167,21 @@ export const Home = () => {
                       />
                     ))}
                   </div>
-                </div>;
+                  <p className="italic mb-4">{testimonial.quote}</p>
+                  <p className="font-medium text-blue-600">
+                    — {testimonial.author}
+                  </p>
+                </div>
               })}
             </div>
           </div>
         </div>
-        <div>
+
+        {/* Product Cards Section */}
+        <div className="container mx-auto px-4 py-12">
+          <h2 className="text-2xl font-bold text-center mb-8">
+            Featured Products
+          </h2>
           <Cards />
         </div>
       </div>
