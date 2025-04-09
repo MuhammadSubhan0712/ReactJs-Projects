@@ -7,9 +7,9 @@ export const Home = () => {
   // Featured Categories Data:
   const categories = [
     { name: "Electronics", image: "/assets/categories/electronics.jpg" },
-    { name: "Fashion", image: "/assets/categories/fashion.jpg" },
+    { name: "Fashion", image: "/assets/categories/fashion1.jpg" },
     { name: "Home & Kitchen", image: "/assets/categories/kitchen.jpg" },
-    { name: "Beauty", image: "/assets/categories/beauty.jpg" },
+    { name: "Beauty", image: "/assets/categories/beauty2.jpg" },
   ];
 
   // Promtional Banners:
@@ -17,13 +17,13 @@ export const Home = () => {
     {
       title: "Summer Sale",
       subtitle: "Up to 50% off",
-      image: "/asssets/promos/summer-sale.jpg",
+      image: "/assets/promos/summer-sale.jpg",
       cta: "Shop Now",
     },
     {
       title: "New Arrivals",
       subtitle: "Trending This Season",
-      image: "/asssets/promos/new-arrivals.jpg",
+      image: "/assets/promos/new-arrivals1.jpg",
       cta: "Explore",
     },
   ];
@@ -94,22 +94,26 @@ export const Home = () => {
           <h2 className="text-2xl font-bold text-center mb-8">
             Shop by Category
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {categories.map((category, index) => (
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all">
-                <img
-                  src={category.image}
-                  alt={category.name}
-                  className="w-full h-48 object-cover transition-transform duartion-500 group-hover:scale-105"
-                />
-
-                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                  <h3 className="text-white text-xl font-bold">
+                 <div className="bg-blue-900 inset-0 flex items-center justify-center">
+                  <h3 className="text-gray-100 text-xl font-bold mb-1">
                     {category.name}
                   </h3>
                 </div>
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                  onError={(e) => {
+                    e.target.src = "/assets/placeholder.jpg";
+                  }}
+                />
+               
               </div>
             ))}
           </div>
@@ -156,7 +160,7 @@ export const Home = () => {
                 <div key={index} className="bg-blue-50 p-6 rounded-lg">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <StarIcon 
+                      <StarIcon
                         key={i}
                         size={16}
                         className={
