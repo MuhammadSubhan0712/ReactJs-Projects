@@ -90,43 +90,57 @@ export const Home = () => {
 
         {/* Featured Categories */}
         <div className="container mx-auto px-4 py-12">
-          <h2 className="text-2xl font-bold text-center mb-8">Shop by Category</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">
+            Shop by Category
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {categories.map((category , index)=> {
-              <div key={index} className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all">
-                <img src={category.image}
-                alt={category.name}
-                className="w-full h-48 object-cover transition-transform duartion-500 group-hover:scale-105"/>
-                
+            {categories.map((category, index) => {
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all">
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="w-full h-48 object-cover transition-transform duartion-500 group-hover:scale-105"
+                />
+
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                  <h3 className="text-white text-xl font-bold">{category.name}</h3>
+                  <h3 className="text-white text-xl font-bold">
+                    {category.name}
+                  </h3>
                 </div>
-              </div>
+              </div>;
             })}
           </div>
         </div>
 
         {/* Promotional Banners */}
         <div className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        {promotion.map((promo, index)=>{
-          <div key={index} className="relative rounded-xl overflow-hidden h-64">
-          <img
-              src={promo.image}
-              alt={promo.title}
-              className="w-full h-full object-cover"
-            />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent flex items-center pl-8">
-          <div>
-            <h3 className="text-2xl font-bold text-white"> {promo.title}</h3>
-            <p className="text-white mb-4">{promo.subtitle}</p>
-            <button className="bg-white text-blue-600 px-6 py-2 rounded-full font-medium 
-            hover:bg-blue-600 hover:text-white transition-colors">{promo.cta}</button>
-          </div>
-          </div>
-          </div>
-        })}
-
-        
+          {promotion.map((promo, index) => {
+            <div
+              key={index}
+              className="relative rounded-xl overflow-hidden h-64">
+              <img
+                src={promo.image}
+                alt={promo.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent flex items-center pl-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-white">
+                    {" "}
+                    {promo.title}
+                  </h3>
+                  <p className="text-white mb-4">{promo.subtitle}</p>
+                  <button
+                    className="bg-white text-blue-600 px-6 py-2 rounded-full font-medium 
+            hover:bg-blue-600 hover:text-white transition-colors">
+                    {promo.cta}
+                  </button>
+                </div>
+              </div>
+            </div>;
+          })}
         </div>
         <div>
           <Cards />
