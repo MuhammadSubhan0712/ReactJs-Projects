@@ -19,7 +19,7 @@ const router = createBrowserRouter([
 
     children: [
       {
-        path: "",
+        path: "/",
         element: <Home />,
       },
       {
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: (
-          <h2 className="text-2xl text-red-500 p-2 mt-44 flex justify-center border-2 rounded">
+          <h2 className="text-2xl text-red-500 p-2 mt-10 flex justify-center border-2 rounded">
             404 | Not found
           </h2>
         ),
