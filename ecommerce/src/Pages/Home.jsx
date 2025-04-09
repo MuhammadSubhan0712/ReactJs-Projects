@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "../Components/Cards";
 import Carousel from "../Components/Carousel";
-import { Tag, Truck, Shield, Star } from "lucide-react";
+import { Tag, Truck, Shield, Star, StarIcon } from "lucide-react";
 
 export const Home = () => {
   // Featured Categories Data:
@@ -50,9 +50,9 @@ export const Home = () => {
   return (
     <>
       <div className="bg-gradient-to-r from-blue-200 to bg-blue-300">
-        {/* <div>
+        <div>
           <Carousel />
-        </div> */}
+        </div>
 
         {/* Value Prepositions */}
         <div className="contianer mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -95,7 +95,7 @@ export const Home = () => {
             Shop by Category
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {categories.map((category, index) => {
+            {categories.map((category, index) => (
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all">
@@ -111,13 +111,13 @@ export const Home = () => {
                   </h3>
                 </div>
               </div>
-            })}
+            ))}
           </div>
         </div>
 
         {/* Promotional Banners */}
         <div className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {promotion.map((promo, index) => {
+          {promotion.map((promo, index) => (
             <div
               key={index}
               className="relative rounded-xl overflow-hidden h-64">
@@ -141,7 +141,7 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-          })}
+          ))}
         </div>
 
         {/* Testimonials */}
@@ -152,11 +152,11 @@ export const Home = () => {
               What Our Customer Say{" "}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => {
+              {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-blue-50 p-6 rounded-lg">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star
+                      <StarIcon 
                         key={i}
                         size={16}
                         className={
@@ -172,18 +172,18 @@ export const Home = () => {
                     — {testimonial.author}
                   </p>
                 </div>
-              })}
+              ))}
             </div>
           </div>
         </div>
 
         {/* Product Cards Section */}
-        {/* <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-12">
           <h2 className="text-2xl font-bold text-center mb-8">
             Featured Products
           </h2>
           <Cards />
-        </div> */}
+        </div>
       </div>
     </>
   );
