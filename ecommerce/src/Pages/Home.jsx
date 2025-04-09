@@ -139,9 +139,12 @@ export const Home = () => {
                   </button>
                 </div>
               </div>
-            </div>;
+            </div>
           })}
         </div>
+
+        {/* Testimonials */}
+        
         <div>
           <Cards />
         </div>
