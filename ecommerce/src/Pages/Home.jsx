@@ -8,7 +8,7 @@ export const Home = () => {
   const categories = [
     { name: "Electronics", image: "/assets/categories/electronics.jpg" },
     { name: "Fashion", image: "/assets/categories/fashion.jpg" },
-    { name: "Home & Kitchen", image: "/assets/categories/home.jpg" },
+    { name: "Home & Kitchen", image: "/assets/categories/kitchen.jpg" },
     { name: "Beauty", image: "/assets/categories/beauty.jpg" },
   ];
 
@@ -50,12 +50,12 @@ export const Home = () => {
   return (
     <>
       <div className="bg-gradient-to-r from-blue-200 to bg-blue-300">
-        <div>
+        {/* <div>
           <Carousel />
-        </div>
+        </div> */}
 
         {/* Value Prepositions */}
-        <iv className="contianer mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="contianer mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
             <Truck className="text-blue-600 mr-3" size={24} />
             <div>
@@ -87,7 +87,7 @@ export const Home = () => {
               <p className="text-sm text-gray-600">Trusted by thousands</p>
             </div>
           </div>
-        </iv>
+        </div>
 
         {/* Featured Categories */}
         <div className="container mx-auto px-4 py-12">
@@ -110,7 +110,7 @@ export const Home = () => {
                     {category.name}
                   </h3>
                 </div>
-              </div>;
+              </div>
             })}
           </div>
         </div>
@@ -140,7 +140,7 @@ export const Home = () => {
                   </button>
                 </div>
               </div>
-            </div>;
+            </div>
           })}
         </div>
 
@@ -178,12 +178,12 @@ export const Home = () => {
         </div>
 
         {/* Product Cards Section */}
-        <div className="container mx-auto px-4 py-12">
+        {/* <div className="container mx-auto px-4 py-12">
           <h2 className="text-2xl font-bold text-center mb-8">
             Featured Products
           </h2>
           <Cards />
-        </div>
+        </div> */}
       </div>
     </>
   );
