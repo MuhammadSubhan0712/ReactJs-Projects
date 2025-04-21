@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-const Layout = ({ children , className }) => {
+const RootLayout = ({ children , className }) => {
 
     // Automatically scroll to top when we navigate to another page. or new page:
     useEffect(()=>{
@@ -13,4 +13,4 @@ const Layout = ({ children , className }) => {
   )
 }
 
-export default Layout
+export default RootLayout;
