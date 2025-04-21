@@ -133,15 +133,15 @@ const Footer = () => {
           <hr className="border-gray-900 md:block hidden"/>
           <hr className="border-gray-900 md:block hidden"/>
         </div>
-
-        {/* Copyright Section */}
-        <div className="flex justify-center mt-10 text-center ">
-          <p className="text-stone-950">
+      </div>
+      
+      <div className="bg-green-950 flex justify-center p-5 mb-4 text-center ">
+          <p className="text-stone-50">
             Copyright &copy; 2025 All Rights Reserved
           </p>
         </div>
       </div>
-    </div>
+   
   );
 };
 

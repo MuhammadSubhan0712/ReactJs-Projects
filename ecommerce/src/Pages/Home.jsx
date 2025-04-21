@@ -6,10 +6,10 @@ import { Tag, Truck, Shield, Star, StarIcon } from "lucide-react";
 export const Home = () => {
   // Featured Categories Data:
   const categories = [
-    { name: "Electronics", image: "/assets/categories/electronics.jpg" },
-    { name: "Fashion", image: "/assets/categories/fashion1.jpg" },
-    { name: "Home & Kitchen", image: "/assets/categories/kitchen.jpg" },
-    { name: "Beauty", image: "/assets/categories/beauty2.jpg" },
+    { name: "Electronics", image: "/assets/electronics.jpg" },
+    { name: "Fashion", image: "/assets/fashion1.jpg" },
+    { name: "Home & Kitchen", image: "/assets/kitchen.jpg" },
+    { name: "Beauty", image: "/assets/beauty.jpg" },
   ];
 
   // Promtional Banners:
@@ -17,13 +17,13 @@ export const Home = () => {
     {
       title: "Summer Sale",
       subtitle: "Up to 50% off",
-      image: "/assets/promos/summer-sale.jpg",
+      image: "/assets/summer-sale.jpg",
       cta: "Shop Now",
     },
     {
       title: "New Arrivals",
       subtitle: "Trending This Season",
-      image: "/assets/promos/new-arrivals1.jpg",
+      image: "/assets/new-arrivals.jpg",
       cta: "Explore",
     },
   ];
