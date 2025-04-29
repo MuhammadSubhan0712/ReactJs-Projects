@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import javascript from "../../assets/javascript.png";
@@ -7,7 +7,6 @@ import next from "../../assets/next.png";
 import bootstrap from "../../assets/bootstrap.svg";
 import tailwindcss from "../../assets/tailwindcss.png";
 import github from "../../assets/github.png";
-
 
 const Skills = () => {
   return (
@@ -29,49 +28,87 @@ const Skills = () => {
             data-aos="fade-right"
             data-aos-delay="500"
             className="leading-relaxed text-base">
-          I specialize in frontend development with expertise in HTML5, CSS3, and JavaScript (ES6+), crafting responsive and accessible web interfaces.
-          I build dynamic applications using React.js, leveraging
+            I specialize in frontend development with expertise in HTML5, CSS3,
+            and JavaScript (ES6+), crafting responsive and accessible web
+            interfaces. I build dynamic applications using React.js, leveraging
+            hooks and different component-based architecture for scalable
+            solutions. For better performance, I use Next.js for both server and
+            client-side rendering. My styling workflow is streamlined with most
+            of Tailwind CSS, ensuring maintainable and modern designs. In some
+            of my projects I integrate RESTful APIs and follow best practices in
+            Git for version control. My focus and I believe in User-Centeric
+            approach.
           </p>
         </div>
-        <div 
-        data-aos="fade-left"
-        data-aos-delay="500"
-        className="flex flex-col md:w-1/2 md:pl-12">
-        <nav className="flex flex-wrap list-none -mb-1">
-        
-        <li className="lg:w-1/3 mb-4 w-1/2">
-         <img src={html} alt="" className="rounded-full w-24 h-24 object-cover"/>
-        </li>
+        <div
+          data-aos="fade-left"
+          data-aos-delay="500"
+          className="flex flex-col md:w-1/2 md:pl-12">
+          <nav className="flex flex-wrap list-none -mb-1">
+            <li className="lg:w-1/3 mb-4 w-1/2">
+              <img
+                src={html}
+                alt=""
+                className="rounded-full w-24 h-24 object-cover"
+              />
+            </li>
 
-        <li className="lg:w-1/3 mb-4 w-1/2">
-         <img src={css} alt="" className="rounded-full w-24 h-24 object-cover"/>
-        </li>
+            <li className="lg:w-1/3 mb-4 w-1/2">
+              <img
+                src={css}
+                alt=""
+                className="rounded-full w-24 h-24 object-cover"
+              />
+            </li>
 
-        <li className="lg:w-1/3 mb-4 w-1/2">
-         <img src={javascript} alt="" className="rounded-full w-24 h-24 object-cover"/>
-        </li>
-       
-        <li className="lg:w-1/3 mb-4 w-1/2">
-         <img src={react} alt="" className="rounded-full w-24 h-24 object-cover"/>
-        </li>
+            <li className="lg:w-1/3 mb-4 w-1/2">
+              <img
+                src={javascript}
+                alt=""
+                className="rounded-full w-24 h-24 object-cover"
+              />
+            </li>
 
-        <li className="lg:w-1/3 mb-4 w-1/2">
-         <img src={next} alt="" className="rounded-full w-24 h-24 object-cover"/>
-        </li>
+            <li className="lg:w-1/3 mb-4 w-1/2">
+              <img
+                src={react}
+                alt=""
+                className="rounded-full w-24 h-24 object-cover"
+              />
+            </li>
 
-        <li className="lg:w-1/3 mb-4 w-1/2">
-         <img src={bootstrap} alt="" className="rounded-full w-24 h-24 object-cover"/>
-        </li>
+            <li className="lg:w-1/3 mb-4 w-1/2">
+              <img
+                src={next}
+                alt=""
+                className="rounded-full w-24 h-24 object-cover"
+              />
+            </li>
 
-        <li className="lg:w-1/3 mb-4 w-1/2">
-         <img src={tailwindcss} alt="" className="rounded-full w-24 h-24 object-cover"/>
-        </li>
+            <li className="lg:w-1/3 mb-4 w-1/2">
+              <img
+                src={bootstrap}
+                alt=""
+                className="rounded-full w-24 h-24 object-cover"
+              />
+            </li>
 
-        <li className="lg:w-1/3 mb-4 w-1/2">
-         <img src={github} alt="" className="rounded-full w-24 h-24 object-cover"/>
-        </li>
+            <li className="lg:w-1/3 mb-4 w-1/2">
+              <img
+                src={tailwindcss}
+                alt=""
+                className="rounded-full w-24 h-24 object-cover"
+              />
+            </li>
 
-        </nav>
+            <li className="lg:w-1/3 mb-4 w-1/2">
+              <img
+                src={github}
+                alt=""
+                className="rounded-full w-24 h-24 object-cover"
+              />
+            </li>
+          </nav>
         </div>
       </div>
     </section>
