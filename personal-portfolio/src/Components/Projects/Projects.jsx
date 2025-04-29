@@ -98,27 +98,27 @@ const Projects = () => {
   const NextJsProjects = [
     {
       id: 1,
-      image: image,
-      title: "Project 1",
-      description: "Photo description for prject",
+      image: '/src/assets/next1.JPG',
+      title: "Ice-Bar",
+      description: "A modern e-commerce platform for discovering and purchasing icecreams.",
     },
     {
       id: 2,
-      image: image2,
-      title: "Project 1",
-      description: "Photo description for prject",
+      image: '/src/assets/next2.JPG',
+      title: "Bookhaven",
+      description: "A modern e-commerce platform for discovering and purchasing books.",
     },
     {
       id: 3,
-      image: image3,
-      title: "Project 1",
-      description: "Photo description for prject",
+      image: '/src/assets/next3.JPG',
+      title: "Meme Generator",
+      description: "For having some fun this is meme generator use the select image and generate your meme",
     },
     {
       id: 4,
-      image: image4,
-      title: "Project 1",
-      description: "Photo description for prject",
+      image: '/src/assets/next1.JPG',
+      title: "Ice-Bar",
+      description: "A modern e-commerce platform for discovering and purchasing icecreams.",
     },
   ];
   const settings = {
