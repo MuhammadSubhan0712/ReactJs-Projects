@@ -6,6 +6,7 @@ import react from "../../assets/react.png";
 import next from "../../assets/next.png";
 import bootstrap from "../../assets/bootstrap.svg";
 import tailwindcss from "../../assets/tailwindcss.png";
+import github from "../../assets/github.png";
 
 
 const Skills = () => {
@@ -28,12 +29,8 @@ const Skills = () => {
             data-aos="fade-right"
             data-aos-delay="500"
             className="leading-relaxed text-base">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Repellendus sunt a fugiat iusto sint tempore quod reiciendis earum
-            molestias voluptate quos quisquam, suscipit omnis praesentium totam
-            dolorum ipsum exercitationem vitae beatae cum ullam vero hic? Nobis
-            tempore nisi unde accusamus eveniet esse fugit temporibus vero
-            praesentium commodi illum, expedita facilis.
+          I specialize in frontend development with expertise in HTML5, CSS3, and JavaScript (ES6+), crafting responsive and accessible web interfaces.
+          I build dynamic applications using React.js, leveraging
           </p>
         </div>
         <div 
@@ -70,6 +67,9 @@ const Skills = () => {
          <img src={tailwindcss} alt="" className="rounded-full w-24 h-24 object-cover"/>
         </li>
 
+        <li className="lg:w-1/3 mb-4 w-1/2">
+         <img src={github} alt="" className="rounded-full w-24 h-24 object-cover"/>
+        </li>
 
         </nav>
         </div>
