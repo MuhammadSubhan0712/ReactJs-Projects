@@ -3,7 +3,7 @@ import logo from "../assets/logo.mp4";
 import { Menu, X } from "lucide-react";
 // import "./index.css";
 const Navbar = () => {
-  const [mobileMenuOpen, setmMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(false);
 
   return (
@@ -73,7 +73,24 @@ const Navbar = () => {
 
       
         {/* For mobile view */}
-      
+        <button
+          className="inline-flex items-center justify-center rounded-md md:hidden p-2 group"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-expanded={mobileMenuOpen}
+        >
+          <span className="sr-only">Open main menu</span>
+          <div className="relative">
+            {mobileMenuOpen ? (
+              <X className="h-8 w-8 text-cyan-400 group-hover:text-purple-500 transition-colors duration-300" />
+            ) : (
+              <Menu className="h-8 w-8 text-white group-hover:text-cyan-400 transition-colors duration-300" />
+            )}
+            <div className="absolute inset-0 rounded-full border-2 border-cyan-400/30 opacity-0 group-hover:opacity-100 group-hover:animate-ping-slow transition-opacity duration-500"></div>
+          </div>
+        </button>
+      </div>
+
+
       {mobileMenuOpen && (
         <div className="md:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2 flex justify-center flex-col items-center gap-5">
