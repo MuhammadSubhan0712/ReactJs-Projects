@@ -7,18 +7,25 @@ const Navbar = () => {
   const [hoveredItem , setHoveredItem] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop:blur support-[backdrop-filter]:bg-background/60 px-4 lg:px-0">
+    <header className="sticky top-0 z-50 w-full border-b border-cyan-400/20 bg-gradient-to-b from-gray-900/90 to-gray-900/50 backdrop-blur-3xl shadow-[0_0_30px_0_rgba(100,255,255,0.15)] px-4 lg:px-0">
       <div className="max-w-7xl mx-auto flex h-14 items-center">
+        
       <div className="md:mr-4 justify-between w-full relative z-10">
-  <a href="#" className="mr-6 flex items-center space-x-2 group">
+  <a 
+  href="#" 
+  className="mr-6 flex items-center space-x-2 group"
+  onMouseEnter={()=> setHoveredItem('logo')}
+  onMouseLeave={() => setHoveredItem(null)}>
+    <div className="relative">
     <video 
       autoPlay 
       loop 
       muted 
-      className="w-16 h-16 transition-all duration-1000 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_15px_rgba(100,255,255,0.8)]"
+      className="w-16 h-16 transition-all duration-1000 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_30px_rgba(100,255,255,0.8)]"
     >
     <source src={logo} />
     </video>
+    </div>
     <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 text-xl font-bold animate-gradient-x">
       YOUR_LOGO
     </span>
