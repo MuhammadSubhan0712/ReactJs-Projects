@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 px-6 lg:px-0 lg:mt-0 mt-10">
               <h1 className="lg:text-7xl text-4xl font-bold lg:leading-snug">
                 Hi There, <br />
-                I'm Rohit <span className="text-red-500">Singh</span>
+                I'm <span className="text-white bg-gray-900"> Muhammad </span>  <span className="text-red-500">Subhan Khan</span>
               </h1>
               <p className="md:text-2xl text-xl mb-4">
                 Web Developer & Designer
@@ -30,7 +30,7 @@ const Hero = () => {
               <button className="bg-black text-white px-3 py-2 w-max rounded-md">
                 <a
                   href="https://drive.google.com/file/d/1LBMHWpTgTGkvCTcHYiU8JQRCHb5-SRl8/view?usp=sharing"
-                  download
+                  download 
                   target="_blank">
                   Download CV
                 </a>
