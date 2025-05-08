@@ -33,7 +33,7 @@ const Navbar = () => {
           </nav>
         </div>
 
-        {/* For mobile menu */}
+        {/* For mobile view */}
         <button className='inline-flex items-center justify-center rounded-md md:hidden' onClick={()=>setmMobileMenuOpen(!mobileMenuOpen)}>
            <span className='sr-only'>Open main menu</span>
            {mobileMenuOpen ? (
@@ -43,6 +43,16 @@ const Navbar = () => {
            )}
         </button>
       </div>
+
+      {mobileMenuOpen && (
+        <div className='md:hidden'>
+            <div className='space-y-1 px-2 pb-3 pt-2'>
+                <a href="#about" className='block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900'>About</a>
+                <a href="#projects" className='block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900'>Projects</a>
+                <a href="#contact" className='block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900'>Contact</a>
+            </div>
+        </div>
+      )}
     </header>
   );
 };
