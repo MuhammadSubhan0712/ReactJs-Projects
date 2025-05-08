@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 // import "./index.css";
 const Navbar = () => {
   const [mobileMenuOpen, setmMobileMenuOpen] = useState(false);
+  const [hoveredItem , setHoveredItem] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop:blur support-[backdrop-filter]:bg-background/60 px-4 lg:px-0">
