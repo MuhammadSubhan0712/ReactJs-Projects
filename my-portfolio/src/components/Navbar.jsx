@@ -25,10 +25,13 @@ const Navbar = () => {
     >
     <source src={logo} />
     </video>
+    {/* For 3d effect: */}
+    <div className={`absolute -bottom-2 left-0 right-0 h-4 bg-gradient-to-t from-cyan-400/40 to-transparent 
+    blur-md opacity-0 transition-opacity duration-500 ${hoveredItem === 'logo' ? 'opacity-100' : ''}`}></div>
     </div>
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 text-xl font-bold animate-gradient-x">
-      YOUR_LOGO
-    </span>
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 text-2xl font-extrabold tracking-tighter animate-gradient-x">
+              NEO<span className="text-white/90">CORP</span>
+            </span>
   </a>
 
   <nav className="md:flex hidden items-center space-x-6 text-lg font-medium">
