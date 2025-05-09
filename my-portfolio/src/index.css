@@ -77,3 +77,18 @@ button:focus-visible {
   background-size: 200% 200%;
   animation: gradient-x 3s ease infinite;
 }
+
+@keyframes float-vertical {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes float-horizontal {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+}
+.animate-float-vertical { animation: float-vertical 8s ease-in-out infinite; }
+.animate-float-horizontal { animation: float-horizontal 10s ease-in-out infinite; }
+
+.bg-grid-white\/\[0\.05\] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}

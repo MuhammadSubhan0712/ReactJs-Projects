@@ -1,138 +1,152 @@
-import React from "react";
+import React, { useState } from "react";
 import MernStack from "../assets/mernstack.png";
-import Html from "../assets/Html.png";
-import Css from "../assets/CSS.png";
-import Javascript from "../assets/JS.png";
-import ReactLogo from "../assets/React.png";
-import ReduxLogo from "../assets/Redux.png";
-import Tailwind from "../assets/Tailwind Css.png";
-import Bootstrap from "../assets/Bootstrap.png";
-import NodeLogo from "../assets/NodeLogo.png";
-import Mongodb from "../assets/mongodb.svg";
-import Express from "../assets/Express.png";
-import NextJs from "../assets/NextJs.png";
+import { Code, Youtube, MonitorSmartphone, BrainCircuit } from "lucide-react";
+
+const techStack = [
+  { name: "HTML", icon: "Html", color: "bg-orange-500/20", border: "border-orange-500/40" },
+  { name: "CSS", icon: "CSS", color: "bg-blue-500/20", border: "border-blue-500/40" },
+  { name: "JavaScript", icon: "JS", color: "bg-yellow-500/20", border: "border-yellow-500/40" },
+  { name: "React", icon: "React", color: "bg-cyan-500/20", border: "border-cyan-500/40" },
+  { name: "Redux", icon: "Redux", color: "bg-purple-500/20", border: "border-purple-500/40" },
+  { name: "Tailwind", icon: "Tailwind Css", color: "bg-teal-500/20", border: "border-teal-500/40" },
+  { name: "Bootstrap", icon: "Bootstrap", color: "bg-violet-500/20", border: "border-violet-500/40" },
+  { name: "Node.js", icon: "NodeLogo", color: "bg-green-500/20", border: "border-green-500/40" },
+  { name: "MongoDB", icon: "mongodb", color: "bg-emerald-500/20", border: "border-emerald-500/40" },
+  { name: "Express", icon: "Express", color: "bg-gray-500/20", border: "border-gray-500/40" },
+  { name: "Next.js", icon: "NextJs", color: "bg-black/20", border: "border-black/40" }
+];
 
 const About = () => {
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+
   return (
-    <>
-      <div className="relative" id="about">
-        <div className="bg-gray-100 py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">
-                About Me
-              </h2>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Hi, I'm Muhammad Subhan Khan
-              </p>
-              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                A Full-Stack Developer with expertise in web development,
-                WordPress, SEO, and the MERN stack.
-              </p>
-            </div>
-            <div className="mt-10">
-              <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    My Journey
-                  </h3>
-                  <p className="mt-4 text-lg text-gray-600">
-                    I started my journey in web development with a passion for
-                    creating intuitive and scalable applications. With
-                    proficiency in the MERN stack (MongoDB, Express.js, React,
-                    and Node.js), I have built Projects such as a full-stack
-                    food ordering website , ajob portal, and even a LinkedIn
-                    clone. My projects demonstrate my ability to integrate
-                    poweful backend solutions with sleek, user-friendly frontend
-                    designs.
-                  </p>
-                  <img
-                    src={MernStack}
-                    alt=""
-                    className="p-2 rounded-lg w-52 mt-4"
-                  />
+    <section id="about" className="relative overflow-hidden bg-gradient-to-b from-gray-900 to-gray-950 py-20">
+      {/* Floating grid background */}
+      <div className="absolute inset-0 z-0 opacity-10">
+        <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
+      </div>
+      
+      {/* Animated tech logos floating */}
+      <div className="absolute inset-0 overflow-hidden">
+        {techStack.map((tech, index) => (
+          <img
+            key={index}
+            src={require(`../assets/${tech.icon}.png`)}
+            alt=""
+            className={`absolute w-16 opacity-5 ${index % 2 === 0 ? 'animate-float-vertical' : 'animate-float-horizontal'}`}
+            style={{
+              top: `${Math.random() * 80 + 10}%`,
+              left: `${Math.random() * 80 + 10}%`,
+              animationDuration: `${Math.random() * 10 + 10}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header with CYBERPUNK effects */}
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-2 bg-red-500/10 text-red-400 text-sm font-bold tracking-wider rounded-full border border-red-500/30 mb-4">
+            ABOUT ME
+          </span>
+          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mt-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+              Hi, I'm Muhammad Subhan Khan
+            </span>
+          </h2>
+          <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-300 leading-relaxed">
+            A <span className="text-cyan-400 font-medium">Full-Stack Developer</span> crafting immersive digital experiences with cutting-edge technologies.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Journey Section - HOLO CARD */}
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/30 to-purple-600/30 rounded-xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative bg-gray-900/80 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/20 h-full">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-cyan-400/10 rounded-lg border border-cyan-400/30">
+                  <BrainCircuit className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="border border-red-200 rounded-lg md:p-7 py-7  flex flex-col gap-8 items-center shadow-lg shadow-red-300">
-                  <h3 className="text-2xl font-semibold text-red-600">
-                    Skills & Expertise
-                  </h3>
-                  <div className="flex items-center justify-center flex-wrap gap-3">
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={Html} alt="" className="w-10" />
-                      <span className="font-semibold">HTML</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={Css} alt="" className="w-10" />
-                      <span className="font-semibold">CSS</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={Javascript} alt="" className="w-10" />
-                      <span className="font-semibold">Javascript</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={ReactLogo} alt="" className="w-10" />
-                      <span className="font-semibold">React</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={ReduxLogo} alt="" className="w-10" />
-                      <span className="font-semibold">Redux</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={Tailwind} alt="" className="w-10" />
-                      <span className="font-semibold">Tailwind Css</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={Bootstrap} alt="" className="w-10" />
-                      <span className="font-semibold">Bootstrap</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={NodeLogo} alt="" className="w-10" />
-                      <span className="font-semibold">Node js</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={Mongodb} alt="" className="w-10" />
-                      <span className="font-semibold">MongoDB</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={Express} alt="" className="w-10" />
-                      <span className="font-semibold">Express js</span>
-                    </div>
-
-                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
-                      <img src={NextJs} alt="" className="w-10" />
-                      <span className="font-semibold">Next js</span>
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-bold text-white">My Journey</h3>
+              </div>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                I started my journey in web development with a passion for creating intuitive and scalable applications. With expertise in the <span className="text-cyan-400">MERN stack</span>, I've built projects like full-stack food ordering systems, job portals, and even a LinkedIn clone. My work showcases seamless backend integration with sleek, user-friendly frontends.
+              </p>
+              <div className="flex justify-center">
+                <img 
+                  src={MernStack} 
+                  alt="MERN Stack" 
+                  className="w-48 transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-2" 
+                />
               </div>
             </div>
+          </div>
 
-            <div className="mt-12">
-              <h3 className="text-2xl font-semibold text-gray-900">
-                More About Me
-              </h3>
-              <p className="mt-4 text-lg text-gray-600">
-                Apart from coding, I am passionate about learning new
-                technologies and keeping myself up-to-date with the latest
-                trends in web development. I also run a YouTube channel where I
-                teach Javascript, MERN Stack development, Wordpress and digital
-                Marketing, helping others dive deep into the world of
-                programming and technology.
-              </p>
+          {/* Skills Section - CYBERPUNK GRID */}
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-red-500/30 to-pink-600/30 rounded-xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative bg-gray-900/80 backdrop-blur-sm rounded-xl p-8 border border-red-400/20 h-full">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-red-500/10 rounded-lg border border-red-500/30">
+                  <Code className="w-8 h-8 text-red-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Skills & Expertise</h3>
+              </div>
+              
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+                {techStack.map((tech, index) => (
+                  <div 
+                    key={index}
+                    className={`relative p-3 rounded-lg border ${tech.border} ${tech.color} backdrop-blur-sm flex flex-col items-center justify-center transition-all duration-300 ${hoveredSkill === index ? 'transform scale-110 shadow-lg shadow-cyan-400/20 z-10' : ''}`}
+                    onMouseEnter={() => setHoveredSkill(index)}
+                    onMouseLeave={() => setHoveredSkill(null)}
+                  >
+                    <img 
+                      src={require(`../assets/${tech.icon}.png`)} 
+                      alt={tech.name} 
+                      className="w-10 h-10 object-contain mb-2" 
+                    />
+                    <span className="text-xs font-medium text-white text-center">{tech.name}</span>
+                    <div className={`absolute inset-0 bg-gradient-to-br from-cyan-400/10 to-purple-600/10 rounded-lg opacity-0 transition-opacity duration-300 ${hoveredSkill === index ? 'opacity-100' : ''}`}></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* More About Me - GLOWING SECTION */}
+        <div className="mt-16 relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-cyan-400/20 rounded-xl blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div className="relative bg-gray-900/80 backdrop-blur-sm rounded-xl p-8 border border-purple-400/20">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-purple-500/10 rounded-lg border border-purple-500/30">
+                <Youtube className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white">Beyond Coding</h3>
+            </div>
+            <p className="text-gray-300 leading-relaxed">
+              When I'm not crafting digital experiences, I'm passionate about sharing knowledge. I run a YouTube channel teaching <span className="text-cyan-400">JavaScript</span>, <span className="text-purple-400">MERN Stack</span>, <span className="text-pink-400">WordPress</span>, and <span className="text-red-400">Digital Marketing</span>. I believe in continuous learning and staying ahead of the curve in this rapidly evolving tech landscape.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <div className="flex items-center gap-3 px-4 py-2 bg-cyan-400/10 rounded-full border border-cyan-400/30">
+                <MonitorSmartphone className="w-5 h-5 text-cyan-400" />
+                <span className="text-sm font-medium text-white">Tech Enthusiast</span>
+              </div>
+              <div className="flex items-center gap-3 px-4 py-2 bg-purple-400/10 rounded-full border border-purple-400/30">
+                <Youtube className="w-5 h-5 text-purple-400" />
+                <span className="text-sm font-medium text-white">Content Creator</span>
+              </div>
+              <div className="flex items-center gap-3 px-4 py-2 bg-pink-400/10 rounded-full border border-pink-400/30">
+                <BrainCircuit className="w-5 h-5 text-pink-400" />
+                <span className="text-sm font-medium text-white">Continuous Learner</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
