@@ -61,9 +61,73 @@ const About = () => {
                       <img src={Html} alt="" className="w-10" />
                       <span className="font-semibold">HTML</span>
                     </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={Css} alt="" className="w-10" />
+                      <span className="font-semibold">CSS</span>
+                    </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={Javascript} alt="" className="w-10" />
+                      <span className="font-semibold">Javascript</span>
+                    </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={ReactLogo} alt="" className="w-10" />
+                      <span className="font-semibold">React</span>
+                    </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={ReduxLogo} alt="" className="w-10" />
+                      <span className="font-semibold">Redux</span>
+                    </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={Tailwind} alt="" className="w-10" />
+                      <span className="font-semibold">Tailwind Css</span>
+                    </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={Bootstrap} alt="" className="w-10" />
+                      <span className="font-semibold">Bootstrap</span>
+                    </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={NodeLogo} alt="" className="w-10" />
+                      <span className="font-semibold">Node js</span>
+                    </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={Mongodb} alt="" className="w-10" />
+                      <span className="font-semibold">MongoDB</span>
+                    </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={Express} alt="" className="w-10" />
+                      <span className="font-semibold">Express js</span>
+                    </div>
+
+                    <div className="border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300">
+                      <img src={NextJs} alt="" className="w-10" />
+                      <span className="font-semibold">Next js</span>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-12">
+              <h3 className="text-2xl font-semibold text-gray-900">
+                More About Me
+              </h3>
+              <p className="mt-4 text-lg text-gray-600">
+                Apart from coding, I am passionate about learning new
+                technologies and keeping myself up-to-date with the latest
+                trends in web development. I also run a YouTube channel where I
+                teach Javascript, MERN Stack development, Wordpress and digital
+                Marketing, helping others dive deep into the world of
+                programming and technology.
+              </p>
             </div>
           </div>
         </div>
