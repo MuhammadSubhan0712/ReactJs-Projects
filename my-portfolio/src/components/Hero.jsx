@@ -9,7 +9,7 @@ const Hero = () => {
   const [hoveredTech, setHoveredTech] = useState(null);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950 pt-24 pb-32">
+    <section id="home" className="relative overflow-hidden bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950 pt-24 pb-32">
       {/* For Floating tech logos: */}
       <div className="absolute inset-0 overflow-hidden">
         <img
