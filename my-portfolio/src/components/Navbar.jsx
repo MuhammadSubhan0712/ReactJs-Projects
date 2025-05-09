@@ -38,7 +38,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="md:flex hidden items-center space-x-2 text-lg font-bold">
-            {['about', 'projects', 'contact'].map((item) => (
+            {['home', 'about', 'projects', 'contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
@@ -89,7 +89,7 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-gradient-to-b from-gray-900 to-gray-800 border-t border-cyan-400/20 shadow-[0_20px_50px_rgba(100,255,255,0.1)]">
           <div className="space-y-1 px-4 pb-6 pt-4 flex flex-col items-center gap-3">
-            {['about', 'projects', 'contact'].map((item) => (
+            {['home', 'about', 'projects', 'contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
