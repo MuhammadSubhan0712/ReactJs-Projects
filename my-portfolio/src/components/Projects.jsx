@@ -46,17 +46,17 @@ const Projects = () => {
           <div className="absolute inset-0 bg-grid-white/[0.03] [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="mb-16 text-center md:text-left">
+          <div className="mb-16 text-center">
             <div className="inline-flex items-center gap-4 px-6 py-3 bg-cyan-400/10 rounded-full border border-cyan-400/30 mb-6">
               <Code2 className="w-6 h-6 text-cyan-400" />
               <span className="text-sm font-bold tracking-widest text-cyan-400 uppercase">
                 Projects
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+            <h2 className="py-2 text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
               My Creations
             </h2>
-            <div className="mt-4 h-1 w-24 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full"></div>
+            <div className="mt-4 h-1 w-24 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full mx-auto"></div>
           </div>
 
           {/* Projects grid */}
