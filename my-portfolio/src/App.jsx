@@ -11,7 +11,7 @@ import ParticlesBackground from './components/Particles';
 const App = () => {
   return (
     <>
-    <div className='relative h-screen w-screen overflow-hidden'>
+    <div className="relative h-screen w-screen overflow-hidden">
     <ParticlesBackground/>
     <Navbar/>
     <Hero/>
@@ -19,7 +19,7 @@ const App = () => {
     <Projects/>
     <Contact/>
     <Footer/>
-    </div>  
+    </div>
     </>
     
   )

@@ -4,7 +4,6 @@ import { Facebook, Twitter, Instagram, Linkedin, Download } from "lucide-react";
 import reactLogo from "../assets/React.png";
 import reduxLogo from "../assets/Redux.png";
 import tailwind from "../assets/Tailwind Css.png";
-// import ParticlesBackground from "./Particles";
 
 const Hero = () => {
   const [hoveredTech, setHoveredTech] = useState(null);
@@ -13,8 +12,6 @@ const Hero = () => {
     <section
       id="home"
       className="relative overflow-hidden bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950 pt-24 pb-32">
-      {/* particle component: */}
-      {/* <ParticlesBackground/> */}
       {/* For Floating tech logos: */}
       <div className="absolute inset-0 overflow-hidden">
         <img
@@ -183,7 +180,6 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
       </div>
-
     </section>
   );
 };
