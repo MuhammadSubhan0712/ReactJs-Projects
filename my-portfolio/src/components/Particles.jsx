@@ -16,7 +16,6 @@ const ParticlesBackground = () => {
   return (
     <>
 
-    <div className="absolute inset-0 z-0">
         <Particles
           id="cyber-particles"
           init={particlesInit}
@@ -217,8 +216,6 @@ const ParticlesBackground = () => {
             },
           }}
         />
-</div>
-
     </>
   );
 };
