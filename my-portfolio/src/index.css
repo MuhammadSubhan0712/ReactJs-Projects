@@ -61,3 +61,17 @@ canvas {
   z-index: 1;
   pointer-events: none;
 }
+
+#cyberverse canvas {
+  filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.7)) 
+          drop-shadow(0 0 20px rgba(255, 0, 230, 0.5));
+}
+
+@keyframes hologram-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+#cyberverse {
+  animation: hologram-pulse 4s ease-in-out infinite;
+}

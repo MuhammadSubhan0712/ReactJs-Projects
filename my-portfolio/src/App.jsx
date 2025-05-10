@@ -5,20 +5,21 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact  from './components/Contact';
-// import ParticlesBackground from './components/Particles';
+import ParticlesBackground from './components/Particles';
 
 
 const App = () => {
   return (
     <>
-    {/* <ParticlesBackground/> */}
+    <div className='relative h-screen w-screen overflow-hidden'>
+    <ParticlesBackground/>
     <Navbar/>
     <Hero/>
     <About/>
     <Projects/>
     <Contact/>
     <Footer/>
-  
+    </div>  
     </>
     
   )
