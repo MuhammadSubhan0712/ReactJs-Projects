@@ -4,211 +4,92 @@ import { loadFull } from "tsparticles";
 
 const ParticlesBackground = () => {
   const particlesInit = useCallback(async (engine) => {
-    console.log('⚡ Initializing CYBER-ENGINE...');
-    try {
-      await loadFull(engine);
-      console.log('✅ Particle Matrix Activated!');
-    } catch (error) {
-      console.error('‼️ Neural Link Failure:', error);
-    }
+    await loadFull(engine);
   }, []);
 
   return (
-    <div className="fixed inset-0 -z-10 h-screen w-screen">
+    <div className="fixed inset-0 -z-10">
       <Particles
-        id="cyberverse"
         init={particlesInit}
-        // className="absolute inset-0 opacity-100"
         options={{
-          fullScreen: { enable: false, zIndex: -1 },
           background: { color: "transparent" },
-          fpsLimit: 144,
+          fpsLimit: 120,
           interactivity: {
             events: {
-              onClick: {
-                enable: true,
-                mode: "repulse",
-              },
               onHover: {
                 enable: true,
-                mode: "bubble",
-                parallax: {
-                  enable: true,
-                  force: 120,
-                  smooth: 15,
-                },
+                mode: "connect",
               },
-              resize: true,
+              onClick: {
+                enable: true,
+                mode: "push",
+              },
             },
             modes: {
-              repulse: {
-                distance: 150,
-                duration: 1,
-                speed: 5,
-              },
-              bubble: {
-                distance: 200,
-                size: 20,
-                duration: 2,
-                opacity: 0.8,
-                color: "#00f2ff",
-              },
-              trail: {
-                delay: 0.001,
-                quantity: 10,
-                particles: {
-                  color: {
-                    value: ["#ff00e6", "#00ff9d", "#7700ff"],
-                  },
-                  move: {
-                    speed: 5,
-                  },
+              connect: {
+                distance: 100,
+                links: {
+                  opacity: 0.3
                 },
+                radius: 200
+              },
+              push: {
+                quantity: 3,
               },
             },
           },
           particles: {
             color: {
-              value: [
-                "#00f2ff", // Cyber Cyan
-                "#ff00e6", // Neon Pink
-                "#00ff9d", // Matrix Green
-                "#7700ff", // Hologram Purple
-                "#ff5100", // Blaze Orange
-              ],
+              value: ["#3b82f6", "#8b5cf6", "#ec4899"], // Blue, Purple, Pink
             },
             links: {
-              color: "random",
-              distance: 100,
+              color: "#64748b", // Cool gray
+              distance: 120,
               enable: true,
-              opacity: 0.8,
-              width: 2,
-              warp: true,
-              blink: true,
-              consent: true,
+              opacity: 0.4,
+              width: 1,
             },
             move: {
-              attract: {
-                enable: true,
-                rotate: {
-                  x: 2000,
-                  y: 2000,
-                },
-              },
-              direction: "none",
               enable: true,
+              speed: 1,
               outModes: {
-                default: "bounce-horizontal",
+                default: "out",
               },
-              random: true,
-              speed: 3,
-              straight: false,
               trail: {
                 enable: true,
-                length: 20,
+                length: 10,
                 fillColor: "#000000",
               },
-              warp: true,
-              vibrate: true,
             },
             number: {
+              value: 80,
               density: {
                 enable: true,
-                area: 1000,
+                area: 800,
               },
-              value: 200,
             },
             opacity: {
-              value: 1,
+              value: { min: 0.1, max: 0.5 },
               animation: {
                 enable: true,
-                speed: 2,
-                minimumValue: 0.1,
-                sync: false,
+                speed: 1,
               },
             },
             shape: {
-              type: ["circle", "triangle", "star", "polygon"],
-              options: {
-                star: {
-                  sides: 5,
-                },
-                polygon: {
-                  sides: Math.floor(Math.random() * 6) + 3,
-                },
-              },
+              type: "circle",
             },
             size: {
-              value: { min: 1, max: 8 },
-              animation: {
-                enable: true,
-                speed: 5,
-                minimumValue: 0.1,
-                sync: false,
-              },
-            },
-            twinkle: {
-              lines: {
-                enable: true,
-                frequency: 0.1,
-                opacity: 1,
-                color: "#00f2ff",
-              },
-              particles: {
-                enable: true,
-                frequency: 0.1,
-                opacity: 1,
-                color: "#ff00e6",
-              },
+              value: { min: 1, max: 3 },
             },
             wobble: {
               enable: true,
-              distance: 10,
-              speed: 2,
-            },
-            life: {
-              count: 1,
-              duration: {
-                value: 3,
-              },
+              distance: 5,
+              speed: 1,
             },
           },
           detectRetina: true,
-          motion: {
-            disable: false,
-            reduce: {
-              factor: 1,
-              value: true,
-            },
-          },
-          emitters: {
-            direction: "none",
-            life: {
-              count: 0,
-              duration: 0.1,
-              delay: 0.4,
-            },
-            rate: {
-              delay: 0.1,
-              quantity: 0,
-            },
-            size: {
-              width: 0,
-              height: 0,
-            },
-          },
-          preset: "fireworks",
         }}
       />
-      
-      {/* Glow Overlay */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: `radial-gradient(ellipse at center, 
-          transparent 0%, 
-          rgba(0, 242, 255, 0.05) 40%, 
-          rgba(255, 0, 230, 0.03) 70%, 
-          transparent 100%)`
-      }}></div>
     </div>
   );
 };

@@ -11,15 +11,14 @@ const Hero = () => {
 
   return (
     <>
-
     <section
       id="home"
-      className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950 pt-24 pb-32">
+      className="relative h-screen w-full overflow-hidden pt-24 pb-32">
       
       {/* For Floating tech logos: */}
       <ParticlesBackground/>
 
-      <div className="absolute inset-0 overflow-hidden z-0">
+      <div className="absolute inset-0 overflow-hidden z-10">
         <img
           src={reactLogo}
           alt="React"
