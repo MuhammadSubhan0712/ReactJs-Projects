@@ -4,16 +4,22 @@ import { Facebook, Twitter, Instagram, Linkedin, Download } from "lucide-react";
 import reactLogo from "../assets/React.png";
 import reduxLogo from "../assets/Redux.png";
 import tailwind from "../assets/Tailwind Css.png";
+import ParticlesBackground from "./Particles";
 
 const Hero = () => {
   const [hoveredTech, setHoveredTech] = useState(null);
 
   return (
+    <>
+
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950 pt-24 pb-32">
+      className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950 pt-24 pb-32">
+      
       {/* For Floating tech logos: */}
-      <div className="absolute inset-0 overflow-hidden">
+      <ParticlesBackground/>
+
+      <div className="absolute inset-0 overflow-hidden z-0">
         <img
           src={reactLogo}
           alt="React"
@@ -52,8 +58,7 @@ const Hero = () => {
 
             <div className="space-y-6">
               <p className="text-2xl font-medium text-cyan-300 tracking-wide">
-                WEB DEVELOPER &{" "}
-                <span className="text-purple-400">DESIGNER</span>
+                WEB DEVELOPER 
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
@@ -181,6 +186,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
       </div>
     </section>
+    </>
   );
 };
 
