@@ -36,6 +36,13 @@ const Projects = () => {
       live: "https://ice-bar-next-js.vercel.app",
       github: "#",
     },
+    {
+      title: "Quick Chat",
+      desc: "A modern application that enables real-time communication between users via text and images/-",
+      image: Icebar,
+      live: "https://ice-bar-next-js.vercel.app",
+      github: "#",
+    },
   ];
   return (
     <>

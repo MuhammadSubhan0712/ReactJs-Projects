@@ -8,12 +8,13 @@ import ParticlesBackground from "./Particles";
 
 const Hero = () => {
   const [hoveredTech, setHoveredTech] = useState(null);
+    const [hoveredItem, setHoveredItem] = useState(false);
 
   return (
     <>
     <section
       id="home"
-      className="relative h-screen w-full overflow-hidden pt-24 pb-32">
+      className="relative h-screen w-full overflow-hidden pt-18 pb-32">
       
       {/* For Floating tech logos: */}
       <ParticlesBackground/>
@@ -43,21 +44,22 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Text content with style: */}
           <div className="md:w-1/2 space-y-8 relative z-10">
-            <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight">
+            <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
               <span className="text-gray-300">HI THERE,</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-purple-600">
                 I'M <span className="text-white">MUHAMMAD</span>
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-600 animate-text-shimmer">
-                SUBHAN KHAN
+
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-blue-900 to-white animate-text-shimmer tracking-tighter animate-gradient-x">
+                 SUBHAN KHAN
               </span>
             </h1>
 
             <div className="space-y-6">
               <p className="text-2xl font-medium text-cyan-300 tracking-wide">
-                WEB DEVELOPER 
+               GRADUATED STUDENT
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
@@ -83,7 +85,7 @@ const Hero = () => {
                 </a>
 
                 <button className="relative px-8 py-3 border-2 border-cyan-400/50 text-cyan-400 font-bold tracking-wider rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-white transition-all duration-300 group">
-                  <span className="relative z-10">CONTACT ME</span>
+                  <a href="#contact" className="relative z-10">CONTACT ME</a>
                   <span className="absolute inset-0 rounded-md bg-gradient-to-r from-cyan-400/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                 </button>
               </div>
@@ -98,7 +100,7 @@ const Hero = () => {
                 <img
                   src={HeroImage}
                   alt="Muhammad Subhan Khan"
-                  className="w-full h-auto max-h-[80vh] object-contain grayscale-0 group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-auto max-h-[70vh] object-contain grayscale-0 group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
               </div>
