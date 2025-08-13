@@ -3,23 +3,47 @@ import React, { useEffect, useRef } from "react";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
-  const followRef = useRef(null);
+  const followerRef = useRef(null);
 
   useEffect(() => {
-       if (typeof window !== "undefined") {
-        // To move cursor
-        const moveCursor = (e) => {
-            gsap.to(cursorRef.current, {
-                x: e.clientX,
-                Y: e.clientY,
-                duration: 0.1,
-            });
-        
-        // Follower with delay
+    if (typeof window !== "undefined") {
+      // To move cursor
+      const moveCursor = (e) => {
+        gsap.to(cursorRef.current, {
+          x: e.clientX,
+          Y: e.clientY,
+          duration: 0.1,
+        });
 
-        }
-       }
-  }, [])
+        // Follower with delay
+        gsap.to(followerRef.current, {
+          x: e.clientX,
+          y: e.clientY,
+          duration: 0.6,
+          ease: "power2.out",
+        });
+      };
+
+      const hoverElements = document.querySelectorAll(
+        "a, button, .hover-effect, [data-cursor-hover]"
+      );
+
+      hoverElements.forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          gsap.to(followerRef.current, {
+            scale: 1,
+            backgroundColor: "transparent",
+            borderColor: "#fff",
+          });
+        });
+      });
+
+      document.addEventListener("mousemove", moveCursor);
+      return () => {
+        document.removeEventListener("mousemove", moveCursor);
+      };
+    }
+  }, []);
 
   return (
     <>
