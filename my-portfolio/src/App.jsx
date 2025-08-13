@@ -10,7 +10,6 @@ import CustomCursor from "./components/CustomCursor";
 const App = () => {
   return (
     <>
-      <div className="relative">
         <CustomCursor />
         <Navbar />
         <Hero />
@@ -18,7 +17,6 @@ const App = () => {
         <Projects />
         <Contact />
         <Footer />
-      </div>
     </>
   );
 };

@@ -9,9 +9,10 @@ const CustomCursor = () => {
     if (typeof window !== "undefined") {
       // To move cursor
       const moveCursor = (e) => {
+        // Small dot instant movement
         gsap.to(cursorRef.current, {
           x: e.clientX,
-          Y: e.clientY,
+          y: e.clientY,
           duration: 0.1,
         });
 
@@ -31,13 +32,17 @@ const CustomCursor = () => {
       hoverElements.forEach((el) => {
         el.addEventListener("mouseenter", () => {
           gsap.to(followerRef.current, {
+            scale: 1.5,
+            backgroundColor: "rgba(0, 200, 255, 0.3)",
+            borderColor: "#00c8ff",
+          });
+        });
+
+        el.addEventListener("mouseleave", () => {
+          gsap.to(followerRef.current, {
             scale: 1,
             backgroundColor: "transparent",
             borderColor: "#fff",
-            hoverElements: {
-              backgroundColor: "rgba(0, 200, 255, 0.3)",
-              borderColor: "#00c8ff",
-            },
           });
         });
       });
@@ -67,7 +72,7 @@ const CustomCursor = () => {
     mix-blend-difference z-[9999] transform -translate-x-1/2 -translate-y-1/2"
       />
 
-      {/* Follower (larger ring) */}
+      {/* larger cicle (trails behind)*/}
       <div
         ref={followerRef}
         className="fixed w-8 h-8 border-2 border-white rounded-full pointer-events-none mix-blend-difference z-[9998]

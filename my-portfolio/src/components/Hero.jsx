@@ -8,7 +8,6 @@ import ParticlesBackground from "./Particles";
 
 const Hero = () => {
   const [hoveredTech, setHoveredTech] = useState(null);
-    const [hoveredItem, setHoveredItem] = useState(false);
 
   return (
     <>
@@ -17,7 +16,7 @@ const Hero = () => {
       className="relative h-screen w-full overflow-hidden pt-18 pb-32">
       
       {/* For Floating tech logos: */}
-      <ParticlesBackground/>
+      {/* <ParticlesBackground/> */}
 
       <div className="absolute inset-0 overflow-hidden z-10">
         <img

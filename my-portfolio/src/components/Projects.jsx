@@ -4,6 +4,7 @@ import SaltnPepper from "../assets/HTMLCSS1.PNG";
 import BloggingApp from "../assets/javascript1.PNG";
 import EcommerceApp from "../assets/react1.PNG";
 import Icebar from "../assets/next1.JPG";
+import ChatApp from "../assets/chat-app.JPG"
 import { Code2 } from "lucide-react";
 
 const Projects = () => {
@@ -34,14 +35,14 @@ const Projects = () => {
       desc: "A modern e-commerce platform for discovering and purchasing icecreams.",
       image: Icebar,
       live: "https://ice-bar-next-js.vercel.app",
-      github: "#",
+      github: "https://github.com/MuhammadSubhan0712/Ice-Bar-NextJs",
     },
     {
       title: "Quick Chat",
       desc: "A modern application that enables real-time communication between users via text and images/-",
-      image: Icebar,
-      live: "https://ice-bar-next-js.vercel.app",
-      github: "#",
+      image: ChatApp,
+      live: "https://chat-app-frontend-nine-blush.vercel.app",
+      github: "https://github.com/MuhammadSubhan0712/MERN-stack-Projects/tree/main/QuickChat",
     },
   ];
   return (
