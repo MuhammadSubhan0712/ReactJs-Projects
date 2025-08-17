@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HeroImage from "../assets/Hero.png";
-import { Facebook, Twitter, Instagram, Linkedin, Download } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Download, Github } from "lucide-react";
 import reactLogo from "../assets/React.png";
 import reduxLogo from "../assets/Redux.png";
 import tailwind from "../assets/Tailwind Css.png";
@@ -15,9 +15,9 @@ const Hero = () => {
       id="home"
       className="relative h-screen w-full overflow-hidden pt-18 pb-32">
       
-      {/* For Floating tech logos: */}
-      {/* <ParticlesBackground/> */}
+      <ParticlesBackground/>
 
+      {/* For Floating tech logos: */}
       <div className="absolute inset-0 overflow-hidden z-10">
         <img
           src={reactLogo}
@@ -157,7 +157,7 @@ const Hero = () => {
             hover: "hover:bg-blue-500/40",
           },
           {
-            icon: <Instagram className="w-6 h-6" />,
+            icon: <Github className="w-6 h-6" />,
             color: "bg-pink-500/20",
             hover: "hover:bg-pink-500/40",
           },
