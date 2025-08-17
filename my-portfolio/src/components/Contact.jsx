@@ -11,11 +11,7 @@ import {
 } from "lucide-react";
 import Lottie from "lottie-react";
 import contact from "../assets/contacts.json";
-import { emailjs } from "@emailjs/browser";
-import dotenv from "dotenv";
-import process from "process";
-
-dotenv.config();
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -36,10 +32,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formData,
-        process.env.PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then((response) => {
         alert("✔️ Message sent successfully ✔️");
@@ -154,7 +150,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    name="from_name"
+                    name="name"
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your full name"
@@ -174,11 +170,12 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    name="from_name"
+                    name="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email"
                     className="mt-1 p-3 block w-full rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 focus:outline-none transition-all duration-300"
+                    required
                   />
                 </div>
 
