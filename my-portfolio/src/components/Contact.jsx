@@ -13,6 +13,7 @@ import Lottie from "lottie-react";
 import contact from "../assets/contacts.json";
 import { emailjs } from "@emailjs/browser";
 import dotenv from "dotenv";
+import process from "process";
 
 dotenv.config();
 
@@ -35,10 +36,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        "process.env.SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
         formData,
-        "YOUR_PUBLIC_KEY"
+        process.env.PUBLIC_KEY
       )
       .then((response) => {
         alert("✔️ Message sent successfully ✔️");

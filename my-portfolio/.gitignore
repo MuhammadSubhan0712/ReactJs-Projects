@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 .env
-Contact.jsx
+components
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
