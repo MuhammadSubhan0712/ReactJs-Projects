@@ -121,9 +121,9 @@ const Projects = () => {
 
             {/* To show all projects when button is clicked */}
             {showAllProjects &&
-              otherProjects.map((item, index) => {
-                <Cards key={`other-${index}`} item={item} />;
-              })}
+              otherProjects.map((item, index) => (
+                <Cards key={`other-${index}`} item={item} />
+              ))}
           </div>
 
           {/* View more button */}
@@ -134,7 +134,9 @@ const Projects = () => {
               <span className="relative z-10 flex items-center gap-2">
                 {showAllProjects ? "SHOW LESS" : "VIEW ALL PROJECTS"}
                 <svg
-                  className={`w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 ${showAllProjects ? "rotate-180" : ""}`}
+                  className={`w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 ${
+                    showAllProjects ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24">
