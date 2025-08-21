@@ -29,9 +29,9 @@ const ParticlesBackground = () => {
               connect: {
                 distance: 100,
                 links: {
-                  opacity: 0.3
+                  opacity: 0.3,
                 },
-                radius: 200
+                radius: 200,
               },
               push: {
                 quantity: 3,
@@ -40,10 +40,13 @@ const ParticlesBackground = () => {
           },
           particles: {
             color: {
-              value: ["#3b82f6", "#8b5cf6", "#ec4899"], // Blue, Purple, Pink
+              value: ["#1C00A8", "#FFCF36", "#BD0000"],
+              opacity: { value: 0.7, random: true },
+              move: { enable: true, speed: 2 },
+              blur: { value: 2 },
             },
             links: {
-              color: "#64748b", // Cool gray
+              color: "#64748b",
               distance: 120,
               enable: true,
               opacity: 0.4,

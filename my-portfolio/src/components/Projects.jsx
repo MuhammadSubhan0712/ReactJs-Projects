@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Cards from "./Cards";
 import SaltnPepper from "../assets/HTMLCSS1.PNG";
 import BloggingApp from "../assets/javascript1.PNG";
 import EcommerceApp from "../assets/react1.PNG";
 import Icebar from "../assets/next1.JPG";
-import ChatApp from "../assets/chat-app.JPG"
+import ChatApp from "../assets/chat-app.JPG";
 import { Code2 } from "lucide-react";
 
 const Projects = () => {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+
   const projectJson = [
     {
       title: "Salt'n Pepper",
@@ -42,9 +44,53 @@ const Projects = () => {
       desc: "A modern application that enables real-time communication between users via text and images/-",
       image: ChatApp,
       live: "https://chat-app-frontend-nine-blush.vercel.app",
-      github: "https://github.com/MuhammadSubhan0712/MERN-stack-Projects/tree/main/QuickChat",
+      github:
+        "https://github.com/MuhammadSubhan0712/MERN-stack-Projects/tree/main/QuickChat",
     },
   ];
+
+  const otherProjects = [
+    {
+      title: "Bookhaven",
+      desc: "Online Library",
+      image: SaltnPepper,
+      live: "https://saltn-pepper-by-subhan.netlify.app/",
+      github: "https://github.com/rohitsingh93300/portfolio",
+    },
+    {
+      title: "Quiz App",
+      desc: "General knowledge quiz",
+      image: BloggingApp,
+      live: "https://muhammadsubhan0712.github.io/Personal-Blog-App/",
+      github: "https://github.com/rohitsingh93300/YtSpicyBites",
+    },
+    {
+      title: "Indore Plants",
+      desc: "Ecommerce App for plants",
+      image: EcommerceApp,
+      live: "https://khansubhans-ecommerce.netlify.app/",
+      github: "https://github.com/rohitsingh93300/YouTube-clone",
+    },
+    {
+      title: "Online Admission App",
+      desc: "A modern ",
+      image: Icebar,
+      live: "https://ice-bar-next-js.vercel.app",
+      github: "https://github.com/MuhammadSubhan0712/Ice-Bar-NextJs",
+    },
+    {
+      title: "Quick Chat",
+      desc: "A modern application that enables real-time communication between users via text and images/-",
+      image: ChatApp,
+      live: "https://chat-app-frontend-nine-blush.vercel.app",
+      github:
+        "https://github.com/MuhammadSubhan0712/MERN-stack-Projects/tree/main/QuickChat",
+    },
+  ];
+
+  const toggleShowAllProjects = () => {
+    setShowAllProjects(!showAllProjects);
+  };
   return (
     <>
       <section
@@ -77,7 +123,11 @@ const Projects = () => {
           {/* View more button */}
           <div className="mt-16 text-center">
             <button className="relative group px-8 py-4 rounded-full border-2 border-cyan-400/50 text-cyan-400 font-bold tracking-wider hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-white transition-all duration-300">
-              <span className="relative z-10 flex items-center gap-2">
+              <span
+                onClick={otherProjects.map((index, others) => {
+                  <Cards key={index} others={others} />;
+                })}
+                className="relative z-10 flex items-center gap-2">
                 VIEW ALL PROJECTS
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"

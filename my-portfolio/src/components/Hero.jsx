@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HeroImage from "../assets/Hero.png";
+import HeroImage from "../assets/source.gif";
 import { Facebook, Twitter, Linkedin, Download, Github } from "lucide-react";
 import reactLogo from "../assets/React.png";
 import reduxLogo from "../assets/Redux.png";
@@ -99,7 +99,7 @@ const Hero = () => {
                 <img
                   src={HeroImage}
                   alt="Muhammad Subhan Khan"
-                  className="w-full h-auto max-h-[70vh] object-contain grayscale-0 group-hover:grayscale-0 transition-all duration-700"
+                  className="max-w-[50vh] max-h-[50vh] object-contain grayscale-0 group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
               </div>

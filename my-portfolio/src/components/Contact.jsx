@@ -20,6 +20,8 @@ const Contact = () => {
     message: "",
   });
 
+  const [message, setMessage] = useState("SEND MESSAGE");
+
   const handleChange = (event) => {
     setFormData({
       ...formData,
@@ -29,6 +31,7 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setMessage("Sending...");
 
     emailjs
       .send(
@@ -40,6 +43,7 @@ const Contact = () => {
       .then((response) => {
         alert("✔️ Message sent successfully ✔️");
         setFormData({ name: "", email: "", message: "" });
+        setMessage("SEND MESSAGE");
       })
       .catch((error) => {
         alert("❌ Failed to send message. Please try again later 🔄");
@@ -203,7 +207,7 @@ const Contact = () => {
                   className="relative group w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-pink-600 text-white font-bold rounded-lg overflow-hidden transition-all duration-500 hover:from-red-600 hover:to-pink-700 hover:shadow-lg hover:shadow-red-500/30">
                   <span className="relative z-10 flex items-center gap-2">
                     <Send className="w-5 h-5" />
-                    SEND MESSAGE
+                    {message}
                   </span>
                   <span className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-purple-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                 </button>
