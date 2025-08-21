@@ -118,19 +118,23 @@ const Projects = () => {
             {projectJson.map((item, index) => (
               <Cards key={index} item={item} />
             ))}
+
+            {/* To show all projects when button is clicked */}
+            {showAllProjects &&
+              otherProjects.map((item, index) => {
+                <Cards key={`other-${index}`} item={item} />;
+              })}
           </div>
 
           {/* View more button */}
           <div className="mt-16 text-center">
-            <button className="relative group px-8 py-4 rounded-full border-2 border-cyan-400/50 text-cyan-400 font-bold tracking-wider hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-white transition-all duration-300">
-              <span
-                onClick={otherProjects.map((index, others) => {
-                  <Cards key={index} others={others} />;
-                })}
-                className="relative z-10 flex items-center gap-2">
-                VIEW ALL PROJECTS
+            <button
+              onClick={toggleShowAllProjects}
+              className="relative group px-8 py-4 rounded-full border-2 border-cyan-400/50 text-cyan-400 font-bold tracking-wider hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-white transition-all duration-300">
+              <span className="relative z-10 flex items-center gap-2">
+                {showAllProjects ? "SHOW LESS" : "VIEW ALL PROJECTS"}
                 <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                  className={`w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 ${showAllProjects ? "rotate-180" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24">
