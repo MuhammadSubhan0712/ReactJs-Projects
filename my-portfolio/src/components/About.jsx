@@ -125,12 +125,13 @@ const About = () => {
             </span>
           </h2>
           <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-300 leading-relaxed">
-            A{" "}
+            An{" "}
             <span className="text-cyan-400 font-medium">
-              Full-Stack Developer
+              IT graduate and web application developer
             </span>{" "}
-            crafting immersive digital experiences with cutting-edge
-            technologies.
+            focused on delivering value. I aim to drive progress through hard
+            work, integrity, and a sincere commitment to my organization's
+            success.
           </p>
         </div>
 
