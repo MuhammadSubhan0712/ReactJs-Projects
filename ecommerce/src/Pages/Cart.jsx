@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem, updateQuantity } from "../Config/reducer/cartSlice";
 import { Trash2, Plus, Minus } from "lucide-react";
-import { Link } from "react-router-dom"; 
+
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -120,10 +120,9 @@ const Cart = () => {
               <div className="mt-4 text-center">
                 <p className="text-gray-500 text-sm">
                   or{" "}
-                  
-                  <Link to="products" className="text-blue-500 hover:underline">
+                  <a href="products" className="text-blue-500 hover:underline">
                     Continue Shopping
-                  </Link>
+                  </a>
                 </p>
               </div>
             </div>

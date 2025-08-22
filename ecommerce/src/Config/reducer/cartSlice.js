@@ -19,9 +19,8 @@ export const CartSlice = createSlice({
       state.total += action.payload.price;
     },
     removeItem: (state, action) => {
-      const itemToRemove = (state.items = state.items.find(
-        (item) => item.id === action.payload
-      ));
+      const itemToRemove = state.items.find((item) => item.id === action.payload
+      );
       if (itemToRemove) {
         state.total -= itemToRemove.price * itemToRemove.quantity;
         state.items = state.items.filter((item) => item.id !== action.payload);
