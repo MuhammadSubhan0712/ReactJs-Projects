@@ -6,7 +6,9 @@ const CustomCursor = () => {
   const followerRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    const isDesktop = window.matchMedia("(pointer: fine)").matches;
+
+    if (typeof window !== "undefined" && isDesktop) {
       // To move cursor
       const moveCursor = (e) => {
         // Small dot instant movement
@@ -62,6 +64,13 @@ const CustomCursor = () => {
     document.addEventListener("click", handleClick);
     return () => document.removeEventListener("click", handleClick);
   }, []);
+
+  if (
+    typeof window !== "undefined" &&
+    !window.matchMedia("(pointer: fine)").matches
+  ) {
+    return null;
+  }
 
   return (
     <>
