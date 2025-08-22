@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
+import carousel1 from "/assets/carousel1.jpg";
+import carousel2 from "/assets/carousel2.jpg";
+import carousel3 from "/assets/carousel3.jpg";
+import carousel4 from "/assets/carousel4.jpg";
+import carousel5 from "/assets/carousel5.jpg";
+import carousel6 from "/assets/carousel6.jpg";
+
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
-    "/assets/carousel1.jpg",
-    "/assets/carousel2.jpg",
-    "/assets/carousel3.jpg",
-    "/assets/carousel4.jpg",
-    "/assets/carousel5.jpg",
-    "/assets/carousel6.jpg",
+    carousel1,
+    carousel2,
+    carousel3,
+    carousel4,
+    carousel5,
+    carousel6
   ];
 
   // Auto-rotate slides every 5 seconds
