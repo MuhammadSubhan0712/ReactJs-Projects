@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addItem } from "../Config/reducer/cartSlice";
 import { Loader } from "lucide-react";
+import { Footer } from "flowbite-react";
 
 const Products = () => {
   const [products, setProducts] = useState(null);
@@ -75,9 +76,9 @@ const Products = () => {
           ))}
         </div>
       ) : (
-        <h1 className="text-2xl font-bold text-center text-gray-800">
-          <Loader size={40} strokeWidth={1.5} />
-        </h1>
+        <div className="flex justify-center items-center h-64">
+          <Loader className="animate-spin h-12 w-12 text-blue-500" />
+        </div>
       )}
     </>
   );

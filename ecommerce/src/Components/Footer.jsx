@@ -112,7 +112,7 @@ const Footer = () => {
     </div>
     <div className="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
       <span className="text-sm  text-gray-500 dark:text-gray-300 sm:text-center">
-       Essentia &copy; 2025 <a href="https://essentia.com/">Products</a>. All Rights
+       Essentia &copy; 2025 <abbr className="text-black font-bold" title="Muhammad Subhan Khan">MSK</abbr> <a href="https://essentia.com/">Products</a>. All Rights
         Reserved.
       </span>
       <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
