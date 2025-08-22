@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
-import Home from "./Pages/Home/Home";
-import Market from "./Pages/Market/Market";
-import About from "./Pages/About/About";
-import Popular from "./Pages/Popular/Popular";
-import Review from "./Pages/Review/Review";
-import Footer from "./Components/Footer/Footer";
+import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
+import Market from "./Pages/Market";
+import About from "./Pages/About";
+import Popular from "./Pages/Popular";
+import Review from "./Pages/Review";
+import Footer from "./Components/Footer";
 
 const Layout = () => {
   return (

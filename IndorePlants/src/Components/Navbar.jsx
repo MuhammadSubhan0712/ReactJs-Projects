@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import gif from "../../assets/3rd.gif";
+import gif from "../assets/3rd.gif";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {

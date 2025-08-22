@@ -1,5 +1,4 @@
-import React from "react";
-import hero from "../../assets/home.png";
+import hero from "../assets/home.png";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {

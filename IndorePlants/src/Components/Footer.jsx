@@ -1,5 +1,5 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import footerleaf from "../../assets/leaf-1.png";
+import footerleaf from "../assets/leaf-1.png";
 
 const Footer = () => {
   return (

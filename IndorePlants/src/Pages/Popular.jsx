@@ -1,9 +1,8 @@
-import React from "react";
 import { FaStar, FaShoppingCart } from "react-icons/fa";
-import BostonFern from "../../assets/cart-1.png";
-import RubberPlant from "../../assets/cart-2.png";
-import PeaceLily from "../../assets/cart-3.png";
-import DesertRose from "../../assets/cart-4.png";
+import BostonFern from "../assets/cart-1.png";
+import RubberPlant from "../assets/cart-2.png";
+import PeaceLily from "../assets/cart-3.png";
+import DesertRose from "../assets/cart-4.png";
 
 const Popular = () => {
   return (

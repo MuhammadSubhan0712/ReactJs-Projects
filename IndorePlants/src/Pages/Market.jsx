@@ -1,4 +1,3 @@
-import React from "react";
 import { FaTruck, FaHeadset, FaLeaf, FaDollarSign } from "react-icons/fa";
 
 const Market = () => {

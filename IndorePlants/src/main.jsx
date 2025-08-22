@@ -3,10 +3,10 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
-import Home from './Pages/Home/Home.jsx'
-import About from './Pages/About/About.jsx'
-import Popular from './Pages/Popular/Popular.jsx'
-import Review from './Pages/Review/Review.jsx'
+import Home from './Pages/Home.jsx'
+import About from './Pages/About.jsx'
+import Popular from './Pages/Popular.jsx'
+import Review from './Pages/Review.jsx'
 
 
 const router = createBrowserRouter([

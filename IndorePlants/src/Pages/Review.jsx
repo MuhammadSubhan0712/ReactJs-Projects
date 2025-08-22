@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import decoration from "../../assets/leaf-4.png";
-import custom1 from "../../assets/review-1.jpg";
-import custom2 from "../../assets/review-2.jpg";
-import custom3 from "../../assets/review-3.jpg";
-import custom4 from "../../assets/review-4.jpg";
-import custom5 from "../../assets/review-5.jpg";
-import custom6 from "../../assets/review-6.jpg";
-import custom7 from "../../assets/review-7.jpg";
+import decoration from "../assets/leaf-4.png";
+import custom1 from "../assets/review-1.jpg";
+import custom2 from "../assets/review-2.jpg";
+import custom3 from "../assets/review-3.jpg";
+import custom4 from "../assets/review-4.jpg";
+import custom5 from "../assets/review-5.jpg";
+import custom6 from "../assets/review-6.jpg";
+import custom7 from "../assets/review-7.jpg";
 
 const Review = () => {
   const scrollRef = useRef(null);
