@@ -9,13 +9,6 @@ const Carousel = () => {
     "/assets/carousel4.jpg",
     "/assets/carousel5.jpg",
     "/assets/carousel6.jpg",
-    "/assets/carousel7.jpg",
-    "/assets/carousel8.jpg",
-    "/assets/carousel9.jpg",
-    "/assets/carousel10.jpg",
-    "/assets/carousel11.jpg",
-    "/assets/carousel12.jpg",
-
   ];
 
   // Auto-rotate slides every 5 seconds
