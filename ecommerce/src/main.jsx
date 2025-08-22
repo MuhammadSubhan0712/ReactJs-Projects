@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import store from "./Config/store/store.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout.jsx";
-import { Home } from "./Pages/Home.jsx";
+import {Home}  from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx";
 import Cart from "./Pages/Cart.jsx";
 import Services from "./Pages/Services.jsx";
@@ -16,7 +16,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-
     children: [
       {
         path: "/",
