@@ -4,7 +4,6 @@ const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
     "/assets/carousel1.jpg",
-    "/assets/carousel2.jpg",
     "/assets/carousel3.jpg",
     "/assets/carousel4.jpg",
     "/assets/carousel5.jpg",
