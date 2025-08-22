@@ -43,7 +43,7 @@ const Navbar = () => {
 
         {/* Navigated Links */}
         <ul
-          className={`md:flex space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-green-950 md:bg-transparent md:flex-row flex-col md:items-center transition-all duration-300 ease-in-out ${
+          className={`md:flex space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-green-950 md:bg-transparent md:flex-row flex-col justify-center md:items-center transition-all duration-300 ease-in-out ${
             isOpen ? "flex" : "hidden"
           }`}>
           {[
@@ -56,7 +56,7 @@ const Navbar = () => {
               <a
                 href={`#${item.id}`}
                 onClick={() => scrollToSection(item.id)}
-                className="block py-2 px-4 text-yellow-300 hover:text-orange-500 font-semibold text-lg transition duration-300 hover:underline hover:underline-offset-4">
+                className="block py-2 px-4 text-yellow-300 hover:text-green-300 font-semibold text-lg transition duration-300 hover:underline hover:underline-offset-4">
                 {item.name}
               </a>
             </li>

@@ -45,7 +45,7 @@ const Review = () => {
           onMouseLeave={() => setIsPaused(true)}>
           <div
             ref={scrollRef}
-            className="flex gap-4 sm:gap-8 py-4 sm:py-5 px-4 sm:px-8 overflow-x-scroll sm:overflow-x-auto whitespace-nowrap snap-mandatory">
+            className="flex gap-4 sm:gap-6 py-4 sm:py-5 px-4 sm:px-8 overflow-x-scroll sm:overflow-x-auto whitespace-nowrap snap-mandatory">
             {[
               custom1,
               custom2,
@@ -57,7 +57,7 @@ const Review = () => {
             ].map((img, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-2 w-60 sm:w-72 bg-transparent text-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-3xl cursor-pointer snap-center"
+                className="flex flex-col items-center p-2 w-60 sm:w-72 bg-transparent border-2 border-blue-900/40 text-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-3xl cursor-pointer snap-center"
                 onClick={() => setIsPaused(true)}>
                 <img
                   src={img}

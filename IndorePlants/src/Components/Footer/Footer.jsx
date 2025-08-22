@@ -137,7 +137,7 @@ const Footer = () => {
       
       <div className="bg-green-950 flex justify-center p-5 mb-4 text-center ">
           <p className="text-stone-50">
-            Copyright &copy; 2025 All Rights Reserved
+            Copyright &copy; 2025 <abbr className='text-cyan-400' title="Muhammad Subhan Khan">M$K</abbr> All Rights Reserved
           </p>
         </div>
       </div>

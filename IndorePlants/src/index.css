@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 
-
-
 body {
     font-family:cursive;
+}
+.popular-card:hover img {
+    @apply -top-9;
 }
