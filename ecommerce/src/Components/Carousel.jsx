@@ -10,6 +10,13 @@ const Carousel = () => {
     "/assets/carousel5.jpg",
     "/assets/carousel6.jpg",
     "/assets/carousel7.jpg",
+    "/assets/carousel8.jpg",
+    "/assets/carousel9.jpg",
+    "/assets/carousel10.jpg",
+    "/assets/carousel11.jpg",
+    "/assets/carousel12.jpg",
+    "/assets/carousel13.jpg",
+
   ];
 
   // Auto-rotate slides every 5 seconds
@@ -33,24 +40,40 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-full h-[70vh] overflow-hidden group">
+   <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[90vh] overflow-hidden group">
       {/* Slides container */}
       <div className="relative h-full w-full">
         {images.map((image, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-700 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
+              index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            <img
-              src={image}
-              className="w-full h-full"
-              alt={`Slide ${index + 1}`}
-              loading={index === currentSlide ? "eager" : "lazy"}
-            />
+            <div className="relative w-full h-full">
+              <img
+                src={image}
+                className="w-full h-full object-cover"
+                alt={`Slide ${index + 1}`}
+                loading={index === currentSlide ? "eager" : "lazy"}
+                // Adding sizes attribute for better responsive loading
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+              />
+              {/* Optional: Add overlay for better text contrast if needed */}
+              <div className="absolute inset-0 bg-black/20"></div>
+            </div>
           </div>
         ))}
+      </div>
+
+      {/* Optional: Add captions if needed */}
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 text-white text-center">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-md">
+          Welcome to Our Store
+        </h2>
+        <p className="mt-2 text-sm sm:text-base md:text-lg drop-shadow-md">
+          Discover amazing products and deals
+        </p>
       </div>
 
       {/* Navigation dots */}
@@ -72,11 +95,11 @@ const Carousel = () => {
       <button
         type="button"
         onClick={goToPrev}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/30 hover:bg-white/50 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
         aria-label="Previous slide"
       >
         <svg
-          className="w-6 h-6 text-white"
+          className="w-4 h-4 sm:w-6 sm:h-6 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -92,11 +115,11 @@ const Carousel = () => {
       <button
         type="button"
         onClick={goToNext}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/30 hover:bg-white/50 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
         aria-label="Next slide"
       >
         <svg
-          className="w-6 h-6 text-white"
+          className="w-4 h-4 sm:w-6 sm:h-6 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
