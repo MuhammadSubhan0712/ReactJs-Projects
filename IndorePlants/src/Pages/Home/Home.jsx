@@ -1,20 +1,12 @@
 import React from "react";
 import hero from "../../assets/home.png";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import Lottie from "lottie-react";
-import Anim1 from "../../assets/Anim1.json";
-import Anim2 from "../../assets/Anim2.json";
 
 const Home = () => {
   return (
     <div id="home" className="bg-green-950 font-fam py-16 relative overflow-hidden">
       {/* Animated Plant Icons */}
-      <div className="hidden md:block absolute top-10 left-10 w-16 h-16 lg:w-24 lg:h-24">
-        <Lottie animationData={Anim1} loop={true} />
-      </div>
-      <div className="hidden md:block absolute bottom-20 right-10 w-16 h-16 lg:w-24 lg:h-24">
-        <Lottie animationData={Anim2} loop={true} />
-      </div>
+     
 
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
         {/* Text and Buttons Container */}
