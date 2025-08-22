@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import footerleaf from "../../assets/leaf-1.png";
 
@@ -12,26 +12,22 @@ const Footer = () => {
           <div className="flex space-x-6">
             <a
               href="#"
-              className="text-gray-700 hover:text-yellow-600 transition duration-300"
-            >
+              className="text-gray-700 hover:text-yellow-600 transition duration-300">
               <FaFacebook size={24} />
             </a>
             <a
               href="#"
-              className="text-gray-700 hover:text-yellow-600 transition duration-300"
-            >
+              className="text-gray-700 hover:text-yellow-600 transition duration-300">
               <FaTwitter size={24} />
             </a>
             <a
               href="#"
-              className="text-gray-700 hover:text-yellow-600 transition duration-300"
-            >
+              className="text-gray-700 hover:text-yellow-600 transition duration-300">
               <FaInstagram size={24} />
             </a>
             <a
               href="#"
-              className="text-gray-700 hover:text-yellow-600 transition duration-300"
-            >
+              className="text-gray-700 hover:text-yellow-600 transition duration-300">
               <FaLinkedin size={24} />
             </a>
           </div>
@@ -53,27 +49,37 @@ const Footer = () => {
             <p className="text-lg font-bold text-green-900 mb-4">Quick Link</p>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Plants
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Flowers
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Gardening
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Seeds
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Shipping
                 </a>
               </li>
@@ -82,25 +88,35 @@ const Footer = () => {
 
           {/* Popular Services */}
           <div>
-            <p className="text-lg font-bold text-green-900 mb-4">Popular Services</p>
+            <p className="text-lg font-bold text-green-900 mb-4">
+              Popular Services
+            </p>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Tree Planning
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Grass Cutting
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Weeds Control
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Project
                 </a>
               </li>
@@ -112,36 +128,45 @@ const Footer = () => {
             <p className="text-lg font-bold text-green-900 mb-4">Contact Me</p>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   +923473532002
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   muhammadsubhan0712@gmail.com
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-yellow-600 transition duration-300">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-yellow-600 transition duration-300">
                   Indoreplants@gmail.com
                 </a>
               </li>
             </ul>
           </div>
-          <hr className="border-gray-900 md:block hidden"/>
-          <hr className="border-gray-900 md:block hidden"/>
-          <hr className="border-gray-900 md:block hidden"/>
-          <hr className="border-gray-900 md:block hidden"/>
+          <hr className="border-gray-900 md:block hidden" />
+          <hr className="border-gray-900 md:block hidden" />
+          <hr className="border-gray-900 md:block hidden" />
+          <hr className="border-gray-900 md:block hidden" />
         </div>
       </div>
-      
+
       <div className="bg-green-950 flex justify-center p-5 mb-4 text-center ">
-          <p className="text-stone-50">
-            Copyright &copy; 2025 <abbr className='text-cyan-400' title="Muhammad Subhan Khan">M$K</abbr> All Rights Reserved
-          </p>
-        </div>
+        <p className="text-stone-50">
+          Copyright &copy; 2025{" "}
+          <abbr className="text-cyan-400" title="Muhammad Subhan Khan">
+            M$K
+          </abbr>{" "}
+          All Rights Reserved
+        </p>
       </div>
-   
+    </div>
   );
 };
 
