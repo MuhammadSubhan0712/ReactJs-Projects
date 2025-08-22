@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
