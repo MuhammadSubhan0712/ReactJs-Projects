@@ -1,4 +1,4 @@
-import hero from "../assets/home.png";
+import Herovid from "../assets/Home.mp4";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
@@ -63,11 +63,15 @@ const Home = () => {
 
         {/* Image Container */}
         <div className="md:w-1/2 mt-8 md:mt-0">
-          <img
-            src={hero}
-            alt="Hero Image"
-            className="rounded-lg w-full h-auto"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-140 h-120 rounded-xl object-cover object-center">
+            <source src={Herovid} type="video/mp4" />
+          </video>
         </div>
       </div>
     </div>
