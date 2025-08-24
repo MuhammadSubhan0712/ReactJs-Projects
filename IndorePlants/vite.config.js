@@ -6,5 +6,4 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "./" // For netlify
 })
